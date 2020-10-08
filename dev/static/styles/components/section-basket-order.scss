@@ -1,0 +1,155 @@
+
+.section-basket-order{
+	.section-title{
+		text-align-last: left;
+	}
+
+
+	&__wrap-field{
+		width: 90%;
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		input[type=text],
+		select,
+		textarea{
+			width: 100%;
+			margin-bottom: 10px;
+			padding: 10px 6px;
+			outline: none;
+			border-radius: 5px;
+			border: 1px solid #DCE5E5;
+			transition: 0.3s;
+			color: $dopDark;
+			&:focus{
+			border: 1px solid $basicColorAccent;
+			transition: 0.3s;
+			}
+		}
+
+		input,
+		select{
+
+		}
+
+		textarea{
+			height: 120px;
+		}
+
+
+		.label-radio{
+			margin: 0 8px 8px 0;
+			display: inline-flex;
+
+			width: auto;
+			align-items: flex-start;
+			@media screen and (max-width: 991px) {
+				// width: 100%;
+			}	
+		}
+
+		.text-radio{
+			font-size: 16px;
+			font-weight: 300;
+			color: #222222;
+			margin: -2px 0 4px 4px;
+			line-height: 1.1;
+			transition: 0.3s;
+			&:hover{
+				cursor: pointer;
+				color: $basicColorAccent;
+				transition: 0.3s;
+			}
+		}
+
+		.wrap-input-button{
+			margin: 10px 0;
+			display: flex;
+			input[type=text]
+			{
+				flex: 1 0 50%;
+				height: 42px;
+				border-radius: 4px 0 0 4px;
+				margin-bottom: 0;
+			}
+			.button{
+				min-width: 100px;
+				height: 42px;
+			}
+
+		}
+
+		.wrap-total-button{
+			border-top: solid 1px $BasicBorderColor;
+			margin-top: 15px;
+			padding-top: 22px;
+			display: flex;
+			flex-wrap: wrap;
+			width: 100%;
+			@media screen and (max-width: 991px) {
+				align-items: center;
+			}
+		}
+
+
+
+		@media screen and (max-width: $desktop) {
+			width: 100%;
+		}
+
+		@media screen and (max-width: 991px) {
+			max-width: 600px;
+			margin: 0 auto 35px;
+			justify-content: start;
+			flex-flow: column;
+		}
+
+
+
+	}
+
+	.product-description__text-price{
+		font-size: 18px;
+		margin-left: 5px;
+		color: $basicColorAccent;
+		@media screen and (max-width: $mobile) {
+			width: calc(100% - 150px);
+		}
+	}
+
+	&__button-zakaz{
+		margin-top: 18px;
+		background-color: $basicColorAccent;
+		color: $BasicLight;
+		transition: 0.3s;
+
+		&:hover{
+			background-color: $basicColorAccentHover;
+			transition: 0.3s;
+		}
+
+		@media screen and (max-width: 991px) {
+			margin-top: 0;
+			margin-left: auto;
+		}
+
+		@media screen and (max-width: $mobile) {
+			margin-left: 0;
+			margin-top: 15px;
+		}
+
+
+
+
+		
+
+
+	}
+
+
+
+
+
+}
+
+

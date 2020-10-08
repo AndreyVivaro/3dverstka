@@ -639,6 +639,14 @@ abbr {
 
 
 
+.title-column{
+	font-weight: 500;
+	font-size: 18px;
+	color: $basicDark;
+	 margin-bottom: 20px;
+}
+
+
 
 
 @import "modules/modules";
@@ -656,8 +664,8 @@ abbr {
 @import "components/advantages";
 @import "components/section-card-product";
 
-
-
+@import "components/section-basket-product";
+@import "components/section-basket-order";
 
 
 
@@ -952,5 +960,5 @@ abbr {
 
 
 *{
-	outline: solid 1px #00000020;
+	// outline: solid 1px #00000020;
 }

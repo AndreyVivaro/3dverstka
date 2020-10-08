@@ -1,0 +1,63 @@
+section.section-basket-order.section-padding-bottom
+	.container
+		.row
+			.col-xl-12
+				h2.section-title Оформление заказа
+		.row
+			.col-xl-5.col-lg-5
+				h3.title-column Адрес доставки
+				.section-basket-order__wrap-field
+					input(type="text" placeholder="ФИО")
+					select(name="" ) Страна
+						option(value="Страна") Страна
+						option(value="Россия") Россия
+						option(value="Украина") Украина
+						option(value="Белларусь") Белларусь
+					select(name="" ) Регион
+						option(value="Регион") Регион
+						option(value="Регион 1") Регион 1
+						option(value="Регион 2") Регион 2
+						option(value="Регион 3") Регион 3
+					input(type="text" placeholder="Город")
+					input(type="text" placeholder="Индекс")
+					input(type="text" placeholder="Адрес")
+					textarea(name="comentsOrder" placeholder="Комментарий к заказу")
+			.col-xl-3.col-lg-3
+				h3.title-column Способ доставки
+				.section-basket-order__wrap-field
+					label.label-radio
+						input(type="radio" name="type-cargo" checked)
+						span.text-radio Самовывоз
+					label.label-radio
+						input(type="radio" name="type-cargo")
+						span.text-radio Доставка
+			.col-xl-4.col-lg-4
+				h3.title-column Способ оплаты
+				.section-basket-order__wrap-field
+					label.label-radio
+						input(type="radio" name="type-payment" checked)
+						span.text-radio Оплата картой банка
+					label.label-radio
+						input(type="radio" name="type-payment")
+						span.text-radio Покупай со Сбербанком В кредит
+					label.label-radio
+						input(type="radio" name="type-payment")
+						span.text-radio Квитанция Сбербанка РФ для оплаты в банке
+					label.label-radio
+						input(type="radio" name="type-payment")
+						span.text-radio Банковский перевод
+					.wrap-input-button
+						input(type="text" placeholder="Подарочный сертификат")
+						button.button Ввести
+					.wrap-input-button
+						input(type="text" placeholder="Купон")
+						button.button Ввести
+					.wrap-total-button
+						p Итого к оплате:
+						p.product-description__text-price
+							span(data-priceProduct="20500").number-space-js.price-product-js 20500
+							span.rub &nbsp;
+						button.button.section-basket-order__button-zakaz Оформить заказ
+
+
+

@@ -1,0 +1,174 @@
+.section-basket-product{
+	font-size: 16px;
+
+
+	.container{
+		@media screen and (max-width: $tablet) {
+			max-width: calc(100% - 15px);
+			margin-right: 15px;
+
+		}
+
+	}
+
+	.wpap-table{
+		@media screen and (max-width: $tablet) {
+			overflow-x: scroll;
+		}
+	}
+
+
+
+
+}
+
+
+.table-basket-product{
+	min-width: 100%;
+	@media screen and (max-width: $tablet) {
+		max-width: 900px;
+		width: 885px;
+		margin-right: 15px;
+	}
+	&__head{
+		td{
+			padding: 12px 5px;
+			background-color: $BasicBorderColor;
+			color: $dopDark;
+			font-size: 16px;
+			text-transform: uppercase;
+			font-weight: 400;
+		}
+		.td-img{
+
+		}
+
+
+		.td-name{
+			width: 28%;
+		}
+		.td-quantity{
+			width: 12%;
+			@media screen and (max-width: $desktop) {
+				width: 15%;
+			}
+		}
+	
+		.td-price,
+		.td-total
+		{
+			width: 14%;
+		}
+
+		.td-button{
+			width: 10%;
+			@media screen and (max-width: $desktop) {
+				width: 7%;
+			}
+
+		}
+
+	}
+
+
+
+	&__product{
+		td{
+			padding: 12px 12px;
+			font-size: 16px;
+			font-weight: 500;
+			color: $basicDark;
+			@media screen and (max-width: $tablet) {
+				padding: 10px 4px;
+			}	
+		}
+		td.td-name{
+			font-weight: 400;
+		}
+		.td-img{
+			width: 165px;
+			img{
+				max-width: 100%;
+				height: auto;
+				margin: 0;
+			}
+		}
+	}
+
+
+
+	.button-delete{
+		width: 26px;
+		height: 26px;
+		border: $basicColorAccent 1px solid;
+		border-radius: 100%;
+		position: relative;
+		background-color: #fff;
+		transition: 0.3s;
+
+		&:before,
+		&:after{
+			content: "";
+			position: absolute;
+			z-index: 10;
+			width: 2px;
+			height: 16px;
+			background-color: $basicDark;
+			top: 4px;
+			left: 11px;
+			transition: 0.3s;
+		}
+
+		&:before{
+			transform: rotate(45deg);
+		}
+		&:after{
+			transform: rotate(-45deg);
+
+		}	
+
+		&:hover{
+			background-color: #D24243;
+			border: #D24243 1px solid;
+			transition: 0.3s;
+			&:before,
+			&:after{
+				background-color: $BasicLight;
+				transition: 0.3s;
+			}
+		}
+	}
+
+	td{
+		&:last-child{
+			text-align: right;
+		}
+	}
+
+
+	&__footer{
+		td{
+			padding: 12px 12px;
+			font-size: 16px;
+			font-weight: 500;
+			color: #222222;
+		}
+	}
+
+
+	&__product,
+	&__footer{
+		border-bottom: 1px solid $BasicBorderColor;
+	}
+
+
+
+	.wrap-recount__recount-input{
+		@media screen and (max-width: $tablet) {
+			width: 40px;
+		}	
+	}
+
+
+
+}
