@@ -1,0 +1,535 @@
+
+.card-product-wrap{
+	background-color: $BasicLight;
+	position: relative;
+	&__wrap-info-icons-buttons{
+		height: 55px;
+		// margin: 10px 0;
+		padding: 10px 20px;
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+
+		.svg-sprite-icon{
+			margin-right: 0;
+		}
+
+		@media screen and (max-width: $mobile) {
+			padding: 8px 10px;
+		}
+	}
+
+	&__info-icons{
+		display: flex;
+		flex-wrap: wrap;
+
+	}
+	&__info-icon{
+		position: relative;
+		width: 30px;
+		height: 30px;
+		margin-right: 6px;
+		span{
+			position: absolute;
+			z-index: 10;
+			font-size: 10px;
+			font-weight: 500;
+			color: $BasicLight;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			width: 100%;
+			height: 100%;
+		}
+		.svg-sprite-icon{
+			position: absolute;
+			z-index: 5;
+			width: 100%;
+			height: 100%;
+		}
+		&.card-product-wrap__info-icon-basket-info-js{
+			// display: none;
+			opacity: 0;
+			overflow: hidden;
+			transition: 0.3s;
+			&.active{
+				display: block;
+				opacity: 1;
+				overflow: visible;
+				transition: 0.3s;
+
+			}
+		}
+		@media screen and (max-width: $mobile) {
+			width: 24px;
+			height: 24px;
+		}
+	}
+
+
+
+
+	&__info-buttons{
+
+	}
+
+	&__info-button{
+		border: none;
+		padding: 0;
+		outline: none;
+		background-color: transparent;
+		margin-left: 5px;
+		.svg-sprite-icon{
+			opacity: 0.5;
+			transition: 0.3s;
+			width: 30px;
+			height: 30px;
+		}
+		&:hover{
+			@media screen and (min-width: $tablet) {
+				.svg-sprite-icon{
+					opacity: 1;
+					fill: $basicColorAccent;
+					transition: 0.3s;
+				}
+			}
+		}
+		&.active
+		{
+			cursor: pointer;
+			.svg-sprite-icon{
+				opacity: 1;
+				fill: $basicColorAccent;
+				transition: 0.3s;
+			}	
+		}
+		
+	}
+
+
+
+
+
+	&__wrap-img{
+		width: 100%;
+		max-width: 320px;
+		height: 215px;
+		margin: 5px auto 10px;
+		img{
+			max-width: 100%;
+			height: 100%;
+			margin: 0 auto;
+			object-fit: cover;
+		}
+	}
+
+	&__wraper-content{
+		padding: 0 30px;
+		@media screen and (max-width: $mobile) {
+			padding: 0px 10px;
+		}
+	}
+
+	&__name{
+		font-weight: 500;
+		font-size: 16px;
+		color:  $basicDark;
+		text-align: center;
+		margin-bottom: 34px;
+		@media screen and (max-width: $mobile) {
+			font-size: 14px;
+		}
+	}
+
+
+	&__wrap-info-text{
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;	
+		margin-bottom: 15px;
+	}
+
+	&__info-text{
+		font-weight: 300;
+		font-size: 14px;
+		color: $dopDark;
+	}
+
+	&__info-param{
+		font-weight: 400;
+		font-size: 14px;
+		color: $basicDark;
+	}
+
+	&__name-descr{
+		font-weight: 400;
+		font-size: 14px;
+		color: $basicDark;	
+		text-align: center;
+		margin-bottom: 12px;
+	}
+
+
+	&__wrap-text-dop{
+		border: 1px solid $BasicBorderColor;
+		border-radius: 4px;
+		padding: 4px 8px;
+		margin-bottom: 4px;
+		display: inline-block;
+		font-weight: 300;
+		font-size: 14px;
+		color: $dopLight;
+		transition: 0.3s;
+
+		&:hover{
+			@media screen and (min-width: $tablet) {
+				border: 1px solid $basicColorAccent;
+				transition: 0.3s;
+				cursor: pointer;
+			}
+		}
+
+		&.active{
+			border: 1px solid $basicColorAccent;
+			transition: 0.3s;
+			cursor: pointer;
+		}
+	}
+
+
+
+	&__wrap-text-dop-descr{
+		font-weight: 300;
+		font-size: 14px;
+		color: $dopDark;
+		margin-right: 12px;
+	}
+
+	&__wrap-price-base-sale{
+		display: flex;
+		align-items: flex-end;
+	}
+
+	&__wrap-price{
+		display: flex;
+		justify-content: space-between;
+		align-items: center;
+		margin: 15px 0 18px;
+	}
+
+
+	&__text-price{
+		font-weight: 500;
+		font-size: 18px;
+		color: $basicDark;
+		margin: 0;
+		&_sale{
+		color: $basicColorAccent;
+		margin-left: 8px;
+		font-size: 20px;
+		}
+		&_thround{
+			text-decoration: line-through;
+			font-size: 16px;
+		}
+	}
+
+
+
+
+	&__wrap-recount{
+		
+	}
+
+
+	&__recount-minus,
+	&__recount-plus{
+		border: none;
+		font-size: 18px;
+		font-weight: 500;
+		background-color: #fff;
+		color: $basicDark;
+		transition: 0.3s;
+
+		&:hover{
+			color: $basicColorAccent;
+			transition: 0.3s;
+		}
+	}
+
+
+	&__recount-minus{
+		
+	}
+	&__recount-plus{
+		
+	}
+
+
+
+	&__recount-input{
+		width: 50px;
+		padding: 2px 4px;
+		border: solid 1px transparent;
+		text-align: center;
+		font-size: 16px;
+		font-weight: 400;
+		background-color: #fff;
+		color: $basicDark;
+		border-radius: 4px;
+		transition: 0.3s;
+
+		&:focus{
+			border: solid 1px $basicColorAccent;
+			transition: 0.3s;
+		}
+	}
+
+	// input[type="number"] {
+	// 	-moz-appearance:textfield;
+	// }
+	
+	// input::-webkit-outer-spin-button,
+	// input::-webkit-inner-spin-button {
+	// 	-webkit-appearance: none;
+	// }
+
+
+
+
+	&__button-main{
+		width: 100%;
+		background-color: $basicColorAccent;
+		height: 42px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: $BasicLight;
+		font-size: 	14px;
+		font-weight: 400;
+		border: none;
+		transition: 0.3s;
+
+		&:hover{
+			background-color: $basicColorAccentHover;
+			//color: $basicColorAccent;
+			transition: 0.3s;
+		}
+	}
+
+
+
+	&__wrap-buttons{
+		position: absolute;
+		z-index: 30;
+		width: 100%;
+		opacity: 0;
+		visibility: hidden;
+		transform: translateY(-5px);
+		transition: 0.5s;
+
+		// отоборажение 
+		// visibility: visible;
+		// opacity: 1;
+		// transform: translateY(0px);
+		// отоборажение 
+
+
+	}
+
+
+	// transition: 0.5s;
+
+	&:hover{
+		// box-shadow: 0 0 2px 3px #00000080;
+		// transform: translateY(-5px);
+		// transition: 0.5s;
+
+		@media screen and (min-width: $tablet) {
+			.card-product-wrap__wrap-buttons{
+				visibility: visible;
+				opacity: 1;
+				transform: translateY(0px);
+				transition: 0.5s;
+			}
+		}
+
+	}
+
+	@media screen and (max-width: $tablet) {
+		.card-product-wrap__wrap-buttons{
+			visibility: visible;
+			opacity: 1;
+			transform: translateY(0px);
+			transition: 0.5s;
+		}	
+	}
+
+
+
+	&__button-main-basket{
+		.svg-sprite-icon{
+			fill: $BasicLight;
+			transition: 0.3s;
+
+		}
+		&:hover{
+			fill: $basicColorAccent;
+			transition: 0.3s;
+		}
+	}
+
+
+
+
+	&__button-one,
+	&__button-credit{
+		width: 100%;
+		background-color: $BasicLight;
+		height: 42px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		color: $basicColorAccent;
+		font-size: 	14px;
+		font-weight: 400;
+		border: 1px solid $basicColorAccent;
+		transition: 0.3s;
+		.svg-sprite-icon{
+			fill: $basicColorAccent;
+			transition: 0.3s;
+
+		}
+
+		&:hover{
+			color: $BasicLight;
+			background-color: $basicColorAccent;
+			transition: 0.3s;
+			.svg-sprite-icon{
+				fill: $BasicLight;
+				transition: 0.3s;
+			}	
+		}
+	}
+
+
+	&__button-one{
+		
+	}
+
+	&__button-credit{
+		
+	}
+
+
+
+	&__text-price-sale{
+		// display: none;
+	}
+
+	&__text-price-clarify{
+		font-size: 16px;
+		font-weight: 500;
+		color: $basicDark;
+
+	}
+
+
+	// если есть скидка
+	// &.card-product-wrap__card-sale{
+	// 	.card-product-wrap__text-price-sale{
+	// 		display: block;
+	// 	}
+	// 	.card-product-wrap__text-price-base{
+	// 		text-decoration: line-through;
+	// 	}
+	// }
+
+	
+
+	// если нет цен
+	// &.card-product-wrap__card-no-prace{
+	// 	.card-product-wrap__text-price-clarify{
+	// 		display: block;
+	// 	}
+
+	// 	.card-product-wrap__text-price-base{
+	// 		display: none;
+	// 	}
+
+	// 	.card-product-wrap__text-price-sale{
+	// 		display: none;
+	// 	}
+
+	// 	.card-product-wrap__wrap-buttons{
+	// 		display: none;
+	// 	}
+	// }
+
+}
+
+
+// уменьшенная карточка товара на маленьких экранах
+@media (max-width: $tablet){
+	.row-wrap-card-little{
+		.given-section-wrap-card{
+			padding-bottom: 130px;
+		}
+	}
+}
+// уменьшенная карточка товара на маленьких экранах
+
+
+
+
+
+
+// уменьшенная карточка товара на больших экранах, т.к. не вмещается контент
+@media (min-width: $tablet){
+	.row-wrap-card-little{
+
+		.given-section-wrap-card{
+			padding-bottom: 40px;
+		}
+		.card-product-wrap__wraper-content {
+			padding: 0 7px;
+		}
+		.card-product-wrap__info-button{
+			.svg-sprite-icon {
+				width: 24px;
+				height: 24px;
+			}
+		}
+
+		.card-product-wrap__info-icon{
+			width: 24px;
+			height: 24px;
+		}
+		.card-product-wrap__wrap-info-icons-buttons {
+			height: 40px;
+			padding: 0 12px;
+		}
+
+		.card-product-wrap__text-price_thround{
+			font-size: 14px;
+		}
+
+		.card-product-wrap__text-price_sale{
+			font-size: 16px;
+		}
+
+
+		.card-product-wrap__wrap-img {
+			height: 160px;
+		}
+
+		.wrap-recount__recount-input{
+			width: 40px;
+		}	
+
+
+
+	}
+}
+
+// уменьшенная карточка товара на больших экранах, т.к. не вмещается контент

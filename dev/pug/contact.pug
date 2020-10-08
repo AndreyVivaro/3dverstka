@@ -1,0 +1,60 @@
+extends layout/main
+
+
+block variables
+	-var title = 'Контакты'
+
+block content
+	// можно делать свою верстку
+	section.content-section
+		.container
+			h1.g-title Контакты 
+			.row
+				.col-md-5
+					.contact-info
+						h4 ООО "ИНВОЙС"
+						ul
+							li.icon
+								abbr a
+								span 394030,Россия, Воронежская обл., г.Воронеж, Ул.Революции 1905 г., д.33/2, пом.1/1 
+							li.icon
+								a(href='tel:+7 (473) 202-6151')
+									abbr c
+									span  +7 (473) 202-6151
+							li.icon
+								a(href="mailto:info@invoice77.ru")
+									abbr b
+									span info@invoice77.ru
+							li <b>ИНН:</b> 3664238302 
+							li <b>КПП:</b> 366401001 
+							li <b>ОГРН:</b> 1183668038905
+							li <b>Р/с:</b> 40702810402940006961
+							li <b>К/с:</b> 0101810200000000593
+							li БИК  044525593Б
+							li <b>Банк:</b> АО "АЛЬФА-БАНК"
+
+				.col-md-7
+					form.contact-form
+						.form-row
+							.form-group.col-md-6
+								input.form-control(type='text', placeholder='Ваше имя')
+							.form-group.col-md-6
+								input.form-control(type='text', placeholder='Номер телефона')
+						.form-group
+							input.form-control(type='email', placeholder='Ваш E-mail')
+						.form-group
+							textarea.form-control(placeholder='Введите текст')
+						.form-group
+							.form-check
+								input#gridCheck.form-check-input(type='checkbox' checked)
+								label.form-check-label(for='gridCheck' ) Нажимая кнопку «Отправить», Вы даете свое согласие на 
+									a(href="#" target='_blank') обработку персональных данных									
+						button.g-btn(type='submit') Отправить
+
+	// можно подгружать свои секции с помощью Include  
+	include section/about
+
+
+	// можно подлючить скрипт только на данной странице
+	//script(type='text/javascript', charset='utf-8', async='', src='https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Afaed8090497e4f3ef19a3f971ecaa5ca99ef4edd086e92d2d26d4b2e52f9fbb7&width=100%25&height=400&lang=ru_RU&scroll=true')
+

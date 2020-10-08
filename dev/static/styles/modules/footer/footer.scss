@@ -1,0 +1,154 @@
+.footer-main{
+	background-color: #E5E5E5;
+	.footer-top{
+		padding: 50px 0 0px;
+		border-bottom: 1px solid #C8C8C8;
+		@media (max-width: $mobile){
+			padding-top: 25px;
+		}
+	}
+
+	&__descr{
+		font-size: 18px;
+		font-weight: 500;
+		color: $basicDark;
+		margin-bottom: 15px;
+		@media (max-width: $mobile){
+			display: none;
+		}
+	}
+
+	&__item-menu{
+		margin-bottom: 10px;
+		
+	}
+
+	&__menu{
+		margin-bottom: 30px;
+		@media (max-width: $mobile){
+			display: none;
+		}
+	}
+
+
+	&__ankor-menu{
+		font-size: 16px;
+		font-weight: 400;
+		color: $basicDark;
+		margin-bottom: 8px;
+		transition: 0.3s;
+		&:hover{
+			color: $basicColorAccent;
+			transition: 0.3s;
+			text-decoration: none;
+		}
+	}
+
+
+
+	&__wrap-social-text{
+		display: flex;
+		align-items: center;
+		margin-bottom: 35px;
+		flex-wrap: wrap;
+		@media (max-width: $mobile){
+			flex-direction: column;
+			margin-bottom: 15px;
+		}
+	}
+
+	&__social-text{
+		font-size: 16px;
+		font-weight: 400;
+		color: $basicDark;
+		margin-right: 10px;
+		@media (max-width: 991px){
+			margin: 0 0 12px 0;
+		}
+	}
+
+
+	&__text-about{
+		font-size: 16px;
+		font-weight: 400;
+		color: $basicDark;
+		line-height: 1.4;
+		@media (max-width: 991px){
+			display: none;
+		}
+
+	}
+
+
+
+
+
+
+
+
+	.footer-bottom{
+		padding: 8px 0;
+		.row{
+			align-items: center;
+			@media (max-width: 991px){
+				justify-content: space-between;
+			}
+			@media (max-width: $mobile){
+				flex-direction: column;
+			}
+		}
+	}
+
+
+	&__wrap-payment{
+		display: flex;
+		margin: 15px 0;
+
+		img{
+			margin: 0 10px;
+			height: auto;
+			object-fit: contain;
+			@media (max-width: $mobile){
+				// height: 100%;
+				margin: 0 18px 15px;
+			}
+		}
+		@media (max-width: 991px){
+			width: 100%;
+			justify-content: center;
+		}
+		@media (max-width: $mobile){
+			// height: 40px;
+			flex-wrap: wrap;
+			margin: 5px 0;
+		}
+	}
+
+
+	&__text-copy{
+		margin: 15px 0 15px auto;
+		font-size: 16px;
+		font-weight: 400;
+		color: $dopDark;	
+		@media (max-width: 991px){
+			margin-left: 0;
+			text-align: center;
+		}	
+		@media (max-width:  $mobile){
+			margin: 0 0 5px 0;
+		}
+	}
+
+
+	&__ankor-menu-mobile{
+		display: none;
+		@media (max-width: $mobile){
+			display: block;
+			margin-top: 20px;
+		}
+	}
+
+
+}
+
+

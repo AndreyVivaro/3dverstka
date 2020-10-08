@@ -1,0 +1,122 @@
+section.section-card-product.section-padding-bottom
+	.container
+		.row
+			.col-xl-6
+				.wrap-sliders
+
+					.swiper-container.gallery-thumbs.swiper-container-card-product-vertical
+						.swiper-wrapper
+							-for(let i=0; i<10; i++)
+								.swiper-slide
+									img(src="static/images/content/product/product2.png", alt="изображение товара")
+									//- p 123
+
+
+						//- .swiper-button-next.swiper-button-white
+						//- .swiper-button-prev.swiper-button-white
+
+
+					.swiper-container.gallery-top.swiper-container-card-product-big
+						.swiper-wrapper
+							-for(let i=0; i<10; i++)
+								.swiper-slide
+									img(src="static/images/content/product/product2.png", alt="изображение товара")
+									//- p 123
+
+
+
+
+
+
+
+			.col-xl-6
+				.product-description
+					.product-description__info
+						.rating
+							span.rating__star &#9733;
+							span.rating__star &#9733;
+							span.rating__star &#9733;
+							span.rating__star &#9733;
+							span.rating__star &#9734;
+
+						.product-description__info-icons
+							div.product-description__info-icon.product-description__info-icon-basket-info-js
+								span
+								+icon("BasketInfo")
+							div.product-description__info-icon
+								span
+								+icon("Top")
+							div.product-description__info-icon
+								span
+								+icon("New")
+							div.product-description__info-icon
+								span 13%
+								+icon("Sale")
+
+
+					.product-description__wrap-name
+						h3.product-description__name Anycubic i3 Mega X
+					.product-description__quantity
+						.product-description__wrap-price-text
+
+							p.product-description__text-price.product-description__text-price-base.product-description__text-price_thround
+								span(data-priceProduct="32900").number-space-js.price-product-js 32900
+								span.rub &nbsp;
+							p.product-description__text-price.product-description__text-price_sale
+								span(data-priceProduct="59500").number-space-js.price-product-js 59500
+								span.rub &nbsp;
+
+						.wrap-recount.wrap-recount-js.quantity-block-js
+							button.wrap-recount__recount-minus.recount-minus-js.quantity-arrow-minus-js -
+							input(type="number", value="1").wrap-recount__recount-input.recount-input-js.inputQuantity-js
+							button.wrap-recount__recount-plus.recount-plus-js.quantity-arrow-plus-js +
+
+
+
+						.product-description__info-buttons
+							button.product-description__info-button.product-description__info-button-js
+								+icon("Scales")
+							button.product-description__info-button.product-description__info-button-js
+								+icon("Love")
+
+
+					.product-description__buttons
+						button.button.button-basket
+							+icon("Basket")
+							| В корзину
+						button.button.button-basket
+							+icon("message")
+							| Купить в один клик
+						button.button.button-basket
+							+icon("card")
+							| Купить в кредит
+
+
+					.product-description__feature
+						-for(let i=0; i<5; i++)
+							p.product-description__feature-text
+								span Производитель:
+								span.product-description__feature-dotted
+								span.product-description__feature-param 300x300x305 мм
+
+		.row
+			.col-xl-12
+				nav.wrap-tabs-description
+					#nav-tab.nav.nav-tabs(role='tablist')
+						a#nav-tab-1.nav-item.nav-link.active(data-toggle='tab' href='#nav-content-1' role='tab' aria-controls='nav-content-1' aria-selected='true') Описание
+						a#nav-tab-2.nav-item.nav-link(data-toggle='tab' href='#nav-content-2' role='tab' aria-controls='nav-content-2' aria-selected='false') Характеристики
+						a#nav-tab-3.nav-item.nav-link(data-toggle='tab' href='#nav-content-3' role='tab' aria-controls='nav-content-3' aria-selected='false') Отзывы 0
+						a#nav-tab-4.nav-item.nav-link(data-toggle='tab' href='#nav-content-4' role='tab' aria-controls='nav-content-4' aria-selected='false') Вопрос - Ответ 0
+						a#nav-tab-5.nav-item.nav-link(data-toggle='tab' href='#nav-content-5' role='tab' aria-controls='nav-content-5' aria-selected='false') Доставка и оплата
+						a#nav-tab-6.nav-item.nav-link(data-toggle='tab' href='#nav-content-6' role='tab' aria-controls='nav-content-6' aria-selected='false') Видео
+						a#nav-tab-7.nav-item.nav-link(data-toggle='tab' href='#nav-content-7' role='tab' aria-controls='nav-content-7' aria-selected='false') Комплект поставки
+				#nav-tabContent.tab-content.wrap-tabContent-description
+					#nav-content-1.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='nav-tab-1') i3 Mega Zero - самый бюджетный 3D принтер в линейке Anycubic. Машина имеет алюминиевую раму с жесткой конструкцией. Установка двойной оси Y, обеспечивает плавную работу и точность печати. 3D принтер оснащен экструдером типа Боуден, с двойным механизмом подачи, что обеспечивает более плавную подачу нити и ее экструзию. Благодаря усовершенствованной системе подачи нити, принтер  может работать с гибким филаментом, например TPU. Даже несмотря на низкую стоимость, Mega Zero оснащен автоматической калибровкой рабочего стола. 
+					#nav-content-2.tab-pane.fade(role='tabpanel' aria-labelledby='nav-tab-2') 2 i3 Mega Zero - самый бюджетный 3D принтер в линейке Anycubic. Машина имеет алюминиевую раму с жесткой конструкцией. Установка двойной оси Y, обеспечивает плавную работу и точность печати. 3D принтер оснащен экструдером типа Боуден, с двойным механизмом подачи, что обеспечивает более плавную подачу нити и ее экструзию. Благодаря усовершенствованной системе подачи нити, принтер  может работать с гибким филаментом, например TPU. Даже несмотря на низкую стоимость, Mega Zero оснащен автоматической калибровкой рабочего стола. 
+					#nav-content-3.tab-pane.fade(role='tabpanel' aria-labelledby='nav-tab-3') .3 i3 Mega Zero - самый бюджетный 3D принтер в линейке Anycubic. Машина имеет алюминиевую раму с жесткой конструкцией. Установка двойной оси Y, обеспечивает плавную работу и точность печати. 3D принтер оснащен экструдером типа Боуден, с двойным механизмом подачи, что обеспечивает более плавную подачу нити и ее экструзию. Благодаря усовершенствованной системе подачи нити, принтер  может работать с гибким филаментом, например TPU. Даже несмотря на низкую стоимость, Mega Zero оснащен автоматической калибровкой рабочего стола. 
+					#nav-content-4.tab-pane.fade(role='tabpanel' aria-labelledby='nav-tab-4') ...4 i3 Mega Zero - самый бюджетный 3D принтер в линейке Anycubic. Машина имеет алюминиевую раму с жесткой конструкцией. Установка двойной оси Y, обеспечивает плавную работу и точность печати. 3D принтер оснащен экструдером типа Боуден, с двойным механизмом подачи, что обеспечивает более плавную подачу нити и ее экструзию. Благодаря усовершенствованной системе подачи нити, принтер  может работать с гибким филаментом, например TPU. Даже несмотря на низкую стоимость, Mega Zero оснащен автоматической калибровкой рабочего стола. 
+					#nav-content-5.tab-pane.fade(role='tabpanel' aria-labelledby='nav-tab-5') ...5 i3 Mega Zero - самый бюджетный 3D принтер в линейке Anycubic. Машина имеет алюминиевую раму с жесткой конструкцией. Установка двойной оси Y, обеспечивает плавную работу и точность печати. 3D принтер оснащен экструдером типа Боуден, с двойным механизмом подачи, что обеспечивает более плавную подачу нити и ее экструзию. Благодаря усовершенствованной системе подачи нити, принтер  может работать с гибким филаментом, например TPU. Даже несмотря на низкую стоимость, Mega Zero оснащен автоматической калибровкой рабочего стола. 
+					#nav-content-6.tab-pane.fade(role='tabpanel' aria-labelledby='nav-tab-6') ...6 i3 Mega Zero - самый бюджетный 3D принтер в линейке Anycubic. Машина имеет алюминиевую раму с жесткой конструкцией. Установка двойной оси Y, обеспечивает плавную работу и точность печати. 3D принтер оснащен экструдером типа Боуден, с двойным механизмом подачи, что обеспечивает более плавную подачу нити и ее экструзию. Благодаря усовершенствованной системе подачи нити, принтер  может работать с гибким филаментом, например TPU. Даже несмотря на низкую стоимость, Mega Zero оснащен автоматической калибровкой рабочего стола. 
+					#nav-content-7.tab-pane.fade(role='tabpanel' aria-labelledby='nav-tab-7') ...7 i3 Mega Zero - самый бюджетный 3D принтер в линейке Anycubic. Машина имеет алюминиевую раму с жесткой конструкцией. Установка двойной оси Y, обеспечивает плавную работу и точность печати. 3D принтер оснащен экструдером типа Боуден, с двойным механизмом подачи, что обеспечивает более плавную подачу нити и ее экструзию. Благодаря усовершенствованной системе подачи нити, принтер  может работать с гибким филаментом, например TPU. Даже несмотря на низкую стоимость, Mega Zero оснащен автоматической калибровкой рабочего стола. 
+
+

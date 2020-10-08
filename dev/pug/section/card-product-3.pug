@@ -1,0 +1,59 @@
+// шаблон №3 карточки товара
+.card-product-wrap.card-product-wrap-js
+	// шапка карточки с иконками
+	.card-product-wrap__wrap-info-icons-buttons
+		.card-product-wrap__info-icons
+			//div.card-product-wrap__info-icon
+				span
+				+icon("Top")
+			div.card-product-wrap__info-icon
+				span
+				+icon("New")
+			div.card-product-wrap__info-icon
+				span 13%
+				+icon("Sale")
+			div.card-product-wrap__info-icon.card-product-wrap__info-icon-basket-info-js
+				span
+				+icon("BasketInfo")
+		.card-product-wrap__info-buttons
+			a(href="#").card-product-wrap__info-button
+				+icon("Vue")
+			button.card-product-wrap__info-button.card-product-wrap__info-button-js
+				+icon("Scales")
+			button.card-product-wrap__info-button.card-product-wrap__info-button-js
+				+icon("Love")
+	.card-product-wrap__wrap-img
+		img(src="static/images/content/product/product1.png", alt="изображение товара")
+	.card-product-wrap__wraper-content
+		p.card-product-wrap__name 3D принтер Phrozen Sonic Mini 33
+		.card-product-wrap__wrap-info-text
+			.card-product-wrap__info-text Рабочая камера:
+			.card-product-wrap__info-param 120x68x130 мм
+		.card-product-wrap__wrap-info-text
+			.card-product-wrap__info-text Рабочая камера:
+			.card-product-wrap__info-param 120x68x130 мм
+		.card-product-wrap__wrap-info-text
+			.card-product-wrap__info-text Рабочая камера:
+			.card-product-wrap__info-param 120x68x130 мм
+		p.card-product-wrap__name-descr Дополнительное оборудование:
+		p.card-product-wrap__wrap-text-dop.card-product-wrap__wrap-text-dop-js
+			span.card-product-wrap__wrap-text-dop-descr Ванна для фотополимер
+			span +&nbsp;
+			span.number-space-js 1900
+			span.rub &nbsp;
+		// при клике добавляем .active
+		p.card-product-wrap__wrap-text-dop.card-product-wrap__wrap-text-dop-js
+			span.card-product-wrap__wrap-text-dop-descr FEP пленка
+			span +&nbsp;
+			span.number-space-js 1750
+			span.rub &nbsp;
+		.card-product-wrap__wrap-price.card-product-wrap__wrap-price-js
+			p.card-product-wrap__text-price.card-product-wrap__text-price-clarify
+				span.number-space-js цену уточняйте
+			.wrap-recount.card-product-wrap__wrap-recount-js.quantity-block-js
+				button.wrap-recount__recount-minus.card-product-wrap__recount-minus-js.quantity-arrow-minus-js -
+				input(type="number", value="1").wrap-recount__recount-input.card-product-wrap__recount-input-js.inputQuantity-js
+				button.wrap-recount__recount-plus.card-product-wrap__recount-plus-js.quantity-arrow-plus-js +
+	button.card-product-wrap__button-main.card-product-wrap__button-main-basket.card-product-wrap__button-main-basket-js 
+		+icon("message")
+		| Запросить КП

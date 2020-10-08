@@ -1,0 +1,22 @@
+extends layout/main
+
+
+
+block variables
+	//  block - обычный блок Pug, который может заменить дочерний шаблон	
+	// title в head
+	-var title = 'Favorit 3D'
+
+
+
+block content
+	// блоки, которые подгружаются в main.pug
+	// include - имеет возможность вставки содержимого одного файла в другой файл Pug.
+
+	include section/topSlider
+	include section/main-catalog
+	include section/main-product
+	include section/main-blog
+	include section/about-comp-tabs
+	include section/main-reviews
+	

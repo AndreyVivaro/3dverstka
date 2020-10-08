@@ -1,0 +1,141 @@
+.main-blog{
+
+	background-position: center center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	position: relative;
+	z-index: 10;
+
+	&:before{
+		content: "";
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(236, 235, 236, 0.94);
+	}
+
+
+	.container{
+		position: relative;
+	}
+
+	.row{
+		align-items: stretch;
+	}
+
+	.main-blog-item{
+		&:last-child{
+			@media (max-width: $desktop){
+				display: none;
+			}
+		}
+		&:nth-of-type(2){
+			@media (max-width: $mobile){
+				display: none;
+			}
+		}
+
+
+
+	}
+
+
+}
+
+
+.content{
+
+	.blog-item{
+		background-color: $dopColored;
+		height: 100%;
+		&__img-wrap{
+			width: 100%;
+			height: 270px;
+			overflow: hidden;
+			@media (max-width: $mobile){
+				height: 200px;
+			}	
+			img{
+				width: 100%;
+				max-width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+		}
+		&__content{
+			padding: 30px 15px;
+			display: flex;
+			flex-wrap: wrap;
+			min-height: 250px;
+			flex-direction: column;
+		}
+
+		&__title{
+			font-weight: 500;
+			font-size: 18px;
+			color: $basicDark;
+			margin-bottom: 15px;
+			text-align: center;
+			min-height: 44px;
+			line-height: 1.4;
+			text-decoration: none;
+			transition: 0.3s;
+
+			&:hover{
+				text-decoration: none;
+				color: $basicColorAccent;
+				transition: 0.3s;
+			}
+		}
+
+
+		&__text{
+			font-weight: 400;
+			font-size: 16px;
+			color: $basicDark;
+			margin-bottom: 10px;
+			line-height: 1.4;
+			margin-top: auto;
+			flex: 0 0 auto;
+		}
+
+		&__info{
+			display: flex;
+			width: 100%;
+			flex: 1 0 auto;
+			margin-top: auto;
+			align-items: flex-end;
+			justify-content: space-between;
+
+
+
+		}
+		&__data{
+			font-weight: 300;
+			font-size: 16px;
+			margin-bottom: 0;
+			color: $dopDark;
+		}
+
+		&__href-article{
+			font-weight: 400;
+			font-size: 16px;
+			color: $dopDark;
+			text-decoration: none;
+			transition: 0.3s;
+
+			&:hover{
+				text-decoration: none;
+				color: $basicColorAccent;
+				transition: 0.3s;
+			}
+		}
+	}
+
+
+}
+
+
+
+

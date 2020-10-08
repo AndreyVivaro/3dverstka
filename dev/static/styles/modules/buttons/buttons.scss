@@ -1,0 +1,60 @@
+.button{
+	text-decoration: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 164px;
+	padding: 5px 5px;
+	height: 42px;
+	background-color: transparent;
+	border: 1px solid $basicColorAccent;
+	border-radius: 4px 500px 500px 4px;
+	color: $basicColorAccent;
+	transition: all 0.3s;
+	.svg-sprite-icon{
+		fill: $basicColorAccent;
+		transition: all 0.3s;
+	}
+
+	&.button-from-title{
+		display: inline-flex;
+	}
+
+	&:hover{
+		background-color: $basicColorAccent;
+		color: $BasicLight;
+		cursor: pointer;
+		text-decoration: none;
+		transition: all 0.3s;	
+		.svg-sprite-icon{
+			fill: $BasicLight;
+			transition: all 0.3s;
+		}
+	}
+
+
+}
+
+
+
+.search-input{
+	width: 230px;
+	font-size: 16px;
+	color: #222222;
+	border: none;
+	border-bottom: solid 1px $dopDark;
+	padding: 2px 26px 2px 1px;
+	background-image: url(../images/general/Search.svg);
+	background-repeat: no-repeat;
+	background-position: center right 5px;
+	background-size: 14px 14px;
+	transition: all 0.3s;		
+	&:focus{
+		border-bottom: solid 1px $basicColorAccent;	
+		transition: all 0.3s;		
+	}
+	@media screen and (max-width: $desktop) { 
+		width: 160px;
+	}
+
+}

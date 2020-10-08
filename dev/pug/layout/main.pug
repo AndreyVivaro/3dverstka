@@ -1,0 +1,36 @@
+include ../helpers/mixins
+block variables
+
+doctype html
+html(lang="ru-RU")
+	head
+		meta(charset="utf-8")
+		title #{title}
+		<!--[if IE]>
+		meta(http-equiv='X-UA-Compatible', content="IE = edge")
+		<![endif]-->
+		meta(name="viewport" content="width=device-width,initial-scale=1")
+		meta(name="keywords" content="")
+
+		link(href='https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap', rel='stylesheet')
+		link(rel='stylesheet' type='text/css' href='https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css')
+		link(rel="stylesheet" type='text/css' href="static/css/styles.css")
+	body
+		.wrapper
+			include ../modules/header/header
+			.content
+				block content
+			include ../modules/footer/footer
+
+	
+
+
+		//script(src="static/js/jquery-3.3.1.min.js")
+		script(src='https://code.jquery.com/jquery-3.4.1.min.js')
+		// bootstrap подключаем отдельно
+		script(src='https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js', integrity='sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM', crossorigin='anonymous')
+		
+		script(src="static/js/vendor/libs.js")
+
+		script(src="static/js/main.js")
+		block script

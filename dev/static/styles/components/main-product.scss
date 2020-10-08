@@ -1,0 +1,160 @@
+.main-product{
+	padding-bottom: 5px;
+	background-position: center left, center right;
+	background-repeat: no-repeat, no-repeat;
+	background-size: auto 50%, auto 50%;
+	position: relative;
+	z-index: 10;
+
+
+	@media screen and (max-width: $desktop) {
+		background-position: top 10% left, bottom 10% right;
+		background-size: 30% auto, 30% auto;
+	}
+
+	&:before{
+		content: "";
+		position: absolute;
+		top: 0;
+		width: 100%;
+		height: 100%;
+		background-color: rgba(236, 235, 236, 0.50);
+
+	}
+
+
+
+
+	.item-category-product{
+		@media screen and (max-width: $desktop) {
+			margin-left: auto;
+			margin-right: auto;
+		}
+	}
+
+
+
+	.slider-product-cart{
+		padding-bottom: 110px;
+		overflow: hidden;
+		position: relative;
+
+		&:hover{
+			//box-shadow: 0 0 5px 1px #00000080;
+		}
+
+		@media screen and (max-width: $mobile) {
+			//padding-bottom: 60px;
+		}
+
+
+		&__title{
+			font-weight: 500;
+			font-size: 26px;
+			color:  $basicDark;
+			text-align: center;
+			margin-bottom: 35px;
+			@media screen and (max-width: $mobile) {
+				font-size: 18px;
+			}
+		}
+
+
+
+
+		&__swiper-container{
+
+		}
+
+
+		&__swiper-button-next,
+		&__swiper-button-prev
+		{
+			position: absolute;
+			z-index: 20;
+			top: 245px;
+
+			width: 32px;
+			height: 32px;
+
+
+			.arrow{
+				position: relative;
+				width: 100%;
+				height: 100%;
+				border-radius: 100px;
+				border: solid $dopDark 1px;
+				display: block;
+				transition: 0.3s;
+
+
+				&:after{
+					content: "";
+					width: 10px;
+					height: 10px;
+					position: absolute;
+					z-index: 25;
+					border-right: solid $dopDark 2px;
+					border-bottom: solid $dopDark 2px;
+					top: 50%;
+					left: 50%;
+					transform: translate(-60%, -60%);	
+					transition: 0.3s;
+
+				}
+			}
+
+			&:hover{
+				.arrow{
+					border: solid $basicColorAccent 1px;
+					transition: 0.3s;
+					&:after{
+						border-right: solid $basicColorAccent 2px;
+						border-bottom: solid $basicColorAccent 2px;	
+						transition: 0.3s;
+
+					}
+				}
+			}
+
+
+
+		}
+
+
+
+		&__swiper-button-next{
+			right: 12px;
+			.arrow{
+				transform: rotate(-45deg);	
+
+			}
+		}
+
+		&__swiper-button-prev{
+			left: 12px;
+			.arrow{
+				transform: rotate(135deg);	
+			}
+		}
+
+
+
+
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
+

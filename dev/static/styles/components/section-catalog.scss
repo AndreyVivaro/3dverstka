@@ -1,0 +1,174 @@
+.section-catalog{
+	.accordion{
+		.card{
+
+		}
+		.card-header{
+			padding: 0;
+		}
+
+		.collapse{
+
+		}
+
+		.btn{
+			width: 100%;
+			padding: 0 10px;
+			height: 40px;
+			color: $basicDark;
+			border-radius: 0;
+			display: flex;
+			justify-content: flex-start;
+			align-items: center;
+			background-color: $BasicLight;
+			text-decoration: none;
+			transition: 0.3s;
+			&:hover{
+				text-decoration: none;
+				background-color: $basicColorAccent;
+				color: $BasicLight;
+				transition: 0.3s;
+			}
+		}
+
+		.card-body{
+			padding: 10px 15px;
+			height: 150px;
+			overflow: auto;
+			display: flex;
+			flex-wrap: wrap;
+
+		}
+
+	}
+
+
+	.label-checkbox{
+		margin: 0 8px 8px 0;
+		display: flex;
+		flex-wrap: wrap;
+		width: auto;
+		align-items: center;
+	}
+
+	.text-checkbox{
+		font-size: 14px;
+		font-weight: 300;
+		color: $basicDark;
+		margin-left: 4px;
+	}
+
+
+
+
+	&__wrap-baner{
+		width: 100%;
+		max-width: 300px;
+		height: 300px;
+		@media screen and (max-width: $mobile) {
+			display: none;
+			margin: 15px auto;
+			height: auto;
+		}
+	}
+
+	&__baner-href{
+		width: 100%;
+		height: 100%;
+
+		// display: block;
+		img{
+			width: 100%;
+			max-width: 100%;
+			height: auto;
+			display: block;
+			transition: 0.3s;
+		}
+
+		&:hover{
+			img{
+				transform: translateY(-4px);
+				transition: 0.3s;
+				box-shadow: 0 2px 5px 1px #00000080;
+			}
+
+		}
+
+
+	}
+
+
+	
+
+	&__wrap-products{
+
+
+
+
+	}
+
+
+}
+
+
+
+.col-wrap-choice{
+	height: 300px;
+}
+
+.row-wrap-company{
+	margin-top: -600px;
+	@media screen and (max-width: $desktop) {
+		margin-top: -300px;
+	}
+	@media screen and (max-width: $mobile) {
+		margin-top: 0px;
+	}
+
+}
+
+
+.company{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-around;
+	align-items: flex-start;
+	margin-bottom: 20px;
+	padding-bottom: 20px;
+	border-bottom: solid 1px $BasicBorderColor;
+	.company-href{
+		width: 115px;
+		height: 115px;
+		flex: 0 0 115px;
+		display: block;
+		margin: 12px;
+		img{
+			height: auto;
+			display: block;
+			width: 100%;
+			max-width: 100%;
+			object-fit: contain;
+			transition: 0.3s;
+		}
+		&:hover{
+			img{
+				// border: 2px solid red;
+				transform: translateY(-4px);
+				transition: 0.3s;
+				box-shadow: 0 2px 5px 1px #00000080;
+			}
+		}
+	}
+
+	@media screen and (max-width: 991px) {
+		.company-href{
+			width: 70px;
+			height: 70px;
+			flex: 0 0 70px;
+			margin: 6px;
+		}
+			
+	}
+
+}
+

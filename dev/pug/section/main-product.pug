@@ -1,0 +1,52 @@
+section.main-product.section-padding(style="background-image:url(static/images/general/fon-main-product-1.png), url(static/images/general/fon-main-product-2.png)")
+	.container
+		.row
+			.col-xl-4.col-lg-8.col-md-12.item-category-product
+				.slider-product-cart
+					.slider-product-cart__title.title-dotted-min Популярные товары
+					.swiper-container.slider-product-cart__swiper-container
+						.swiper-wrapper
+							-for(let i=0; i<5; i++)
+								// один слайдер с карточкой
+								.swiper-slide
+									include ./card-product-1
+
+						.slider-product-cart__swiper-button-next
+							span.arrow
+						.slider-product-cart__swiper-button-prev
+							span.arrow
+
+
+			.col-xl-4.col-lg-8.col-md-12.item-category-product
+				.slider-product-cart
+					.slider-product-cart__title.title-dotted-min Акции и спецпредложения
+					.swiper-container.slider-product-cart__swiper-container
+						.swiper-wrapper
+							-for(let i=0; i<2; i++)
+								// один слайдер с карточкой
+								.swiper-slide
+									include ./card-product-2
+
+						.slider-product-cart__swiper-button-next
+							span.arrow
+						.slider-product-cart__swiper-button-prev
+							span.arrow
+
+							
+			.col-xl-4.col-lg-8.col-md-12.item-category-product
+				.slider-product-cart
+					.slider-product-cart__title.title-dotted-min Новинки
+					.swiper-container.slider-product-cart__swiper-container
+						.swiper-wrapper
+							-for(let i=0; i<2; i++)
+								// один слайдер с карточкой
+								.swiper-slide
+									include ./card-product-3
+
+
+						.slider-product-cart__swiper-button-next
+							span.arrow
+						.slider-product-cart__swiper-button-prev
+							span.arrow
+
+

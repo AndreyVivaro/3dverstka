@@ -1,0 +1,31 @@
+section.main-reviews.section-padding.section-button-margin-mobile
+	.container
+		.row
+			.col
+				a.button.button-from-title(href="#") Читать все
+		.row
+			.col-xl-12
+				h2.section-title.title-dotted Отзывы
+
+		.row.row-wrap-swiper
+			.swiper-container.swiper-container-reviews
+				.swiper-wrapper
+					-for(let i=0; i<6; i++)
+						.swiper-slide
+							.swiper-container-reviews__wrap-item
+								.rating
+									span.rating__star &#9733;
+									span.rating__star &#9733;
+									span.rating__star &#9733;
+									span.rating__star &#9733;
+									span.rating__star &#9734;
+								p.swiper-container-reviews__text Заказывал пластик Ultimaker, его не оказалось в наличии. Мне предложили качественную альтернативу, заказ был отправлен в день заказа и пришел в указанный срок.
+								p.swiper-container-reviews__name Андрей
+								p.swiper-container-reviews__date 15.04.2019
+
+
+			.swiper-container-reviews__swiper-pagination
+			.swiper-container-reviews__swiper-button-next
+				span.arrow
+			.swiper-container-reviews__swiper-button-prev
+				span.arrow

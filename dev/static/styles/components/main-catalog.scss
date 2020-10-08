@@ -1,0 +1,159 @@
+.main-catalog{
+	&__card{
+		height: 312px;
+		margin-bottom: 30px;
+		border-radius: 4px;
+		overflow: hidden;
+		position: relative;
+		background-size: cover;
+		background-repeat: no-repeat;
+		background-position: center center;
+		@media (max-width: $mobile){
+			max-width: 400px;
+			margin-left: auto;
+			margin-right: auto;
+			height: 296px;
+		}
+		&_img-1{
+			background-image: url(../images/content/main-catalog/main-catalog-1.jpg);
+		}
+		&_img-2{
+		background-image: url(../images/content/main-catalog/main-catalog-2.jpg);
+		}
+		&_img-3{
+			background-image: url(../images/content/main-catalog/main-catalog-3.jpg);
+		}
+		&_img-4{
+		background-image: url(../images/content/main-catalog/main-catalog-4.jpg);
+		}
+		&_img-5{
+		background-image: url(../images/content/main-catalog/main-catalog-5.jpg);
+		}
+		&_img-6{
+			background-image: url(../images/content/main-catalog/main-catalog-6.jpg);
+		}
+		&:after{
+			content: "";
+			position: absolute;
+			z-index: 10;
+			top: 0;
+			left: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(236, 235, 236, 0.75);
+			transition: all 0.3s;
+
+		}
+		&:before{
+			content: "";
+			position: absolute;
+			z-index: 10;
+			top: 100%;
+			left: 0;
+			right: 0;
+			width: 100%;
+			height: 100%;
+			background-color: rgba(94, 177, 89, 0.84);
+			transition: all 0.3s;
+		}
+
+
+		&:hover{
+			&:after{
+				top: -100%;
+				transition: all 0.3s;
+			}
+			&:before{
+				top: 0%;
+				transition: all 0.3s;
+			}
+
+			.main-catalog__card-title{
+				top: 40px;
+				color: $BasicLight;
+				transition: all 0.3s;
+			}	
+
+			.main-catalog__card-wrap-text{
+				transition: all 0.6s;
+				top: 80px;
+			}
+
+
+		}
+
+
+
+	}
+
+
+
+
+	&__card-content{
+		position: relative;
+		z-index: 15;
+		height: 100%;
+	}
+
+
+	&__card-title{
+		font-weight: 500;
+		text-align: center;
+		font-size: 32px;
+		color: $basicDark;
+		position: absolute;
+		z-index: 20;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		transition: all 0.3s;
+		@media (max-width: $desktop){
+			font-size: 28px;
+		}
+		@media (max-width: $mobile){
+			font-size: 22px;
+		}
+	}
+
+
+	&__card-wrap-text{
+		position: absolute;
+		z-index: 22;
+		top: 80px;
+		top: 200%;
+		transition: all 0.6s;
+		display: flex;
+		flex-wrap: wrap;
+		flex-direction: column;
+		padding: 0 20px;
+		width: 100%;
+			@media (max-width: $desktop){
+			padding: 0 12px;
+		}	
+	}
+
+	&__card-text{
+		font-weight: 500;
+		font-size: 18px;
+		color: $BasicLight;
+		text-transform: uppercase;
+		text-decoration: none;
+		transition: all 0.3s;
+		@media (max-width: $desktop){
+			font-size: 16px;
+		}
+		@media (max-width: $mobile){
+			font-size: 14px;
+		}
+		&:hover{
+			color: $basicColored;
+			text-decoration: none;
+			transition: all 0.3s;
+		}
+	}
+
+
+
+
+}
