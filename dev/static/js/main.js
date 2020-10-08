@@ -109,11 +109,27 @@ var swiperReviews = new Swiper('.swiper-container-reviews', {
 var galleryThumbs = new Swiper('.gallery-thumbs', {
 	spaceBetween: 10,
 	slidesPerView: 4,
-	direction: 'vertical',
+	// direction: 'vertical',
+	direction: getDirection(),
 	freeMode: true,
 	watchSlidesVisibility: true,
-	watchSlidesProgress: true,
+	watchSlidesProgress: true,    
+    on: {
+        resize: function () {
+			galleryThumbs.changeDirection(getDirection());
+		}
+	}
+	
   });
+
+  function getDirection() {
+	var windowWidth = window.innerWidth;
+	var direction = window.innerWidth <= 768 ? 'horizontal' : 'vertical';
+
+	return direction;
+  };
+
+
 
 // правый большой
 
@@ -212,6 +228,12 @@ function calcQuantityPrice(item, quantity ){
 }
 
 
+
+// lightcase в карточке товара
+
+// $('.lightcase-card-product-js').lightcase();
+
+$('a[data-rel^=lightcase]').lightcase();
 
 
 

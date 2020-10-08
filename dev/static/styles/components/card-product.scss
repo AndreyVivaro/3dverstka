@@ -356,12 +356,14 @@
 
 	}
 
+	// на мобильных и планшетах показываем все время
 	@media screen and (max-width: $tablet) {
 		.card-product-wrap__wrap-buttons{
 			visibility: visible;
 			opacity: 1;
 			transform: translateY(0px);
 			transition: 0.5s;
+			position: static;
 		}	
 	}
 
@@ -473,7 +475,9 @@
 @media (max-width: $tablet){
 	.row-wrap-card-little{
 		.given-section-wrap-card{
-			padding-bottom: 130px;
+			// padding-bottom: 130px;
+			padding-bottom: 40px;
+
 		}
 	}
 }

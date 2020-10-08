@@ -6,12 +6,35 @@
 	}
 
 	.wrap-tabContent-description{
-		margin: 0 0 50px 0;
+		margin: 25px 0 50px 0;
 	}
 
 
+	.tab-content{
+		height: auto;
+		.tab-pane {
+			padding: 0px 0px;
+		}
+		img{
+			float: right;
+			margin-left: 15px;
+			max-width: 50%;
+			height: auto;
+			@media screen and (max-width: $mobile) {
+				float: none;
+				margin-left: 0;
+				margin: 15px auto;
+				max-width: 100%;
+
+			}
+		}	
+	} 
+
 	.nav-tabs{
 		border: none;
+		.nav-item {
+			margin-bottom: 5px;
+		}		
 		.nav-link {
 			padding: 8px 20px;
 			font-weight: 400;
@@ -51,6 +74,11 @@
 	display: flex;
 	flex-wrap: wrap;
 	justify-content: space-between;
+	@media screen and (max-width: $mobile) {
+		height: auto;
+		margin-bottom: 30px;
+
+	}
 
 }
 
@@ -64,6 +92,10 @@
 		height: 100%;
 		object-fit: contain;
 		margin: 0 auto;
+		@media screen and (max-width: $mobile) {
+			height: auto;
+			margin: 15px auto;
+		}
 	}
 	.swiper-slide{
 		opacity: 0.6;
@@ -74,7 +106,10 @@
 		}
 	}
 	
-	
+	@media screen and (max-width: $mobile) {
+		flex: 0 0 100%;
+	}	
+
 
 
 
@@ -98,7 +133,9 @@
 	.swiper-slide {
 		padding: 15px;
 	}
-
+	@media screen and (max-width: $mobile) {
+		flex: 0 0 100%;
+	}	
 
 
 }
@@ -112,8 +149,34 @@
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		align-items: center;
 
+		.rating{
+			@media screen and (max-width: 575px) {
+				margin-bottom: 10px;
+			}
+		}
+		@media screen and (max-width: 991px) {
+			margin-top: 15px;
+			margin-bottom: 15px;
+		}
+		@media screen and (max-width: 575px) {
+			align-items: flex-start;
+		}
 	}
+
+	&__presence{
+		font-size: 14px;
+		font-weight: 400;
+		padding: 4px 15px;
+		color: $dopDark;
+		line-height: 1;
+		background-color: $dopColored;
+		&_no{
+			background-color: $dopLight;
+		}
+	}
+
 
 	&__info-icons{
 		display: flex;
@@ -172,18 +235,32 @@
 		font-size: 36px;
 		font-weight: 500;
 		color: $basicDark;
+		margin-bottom: 20px;
+		@media screen and (max-width: $mobile) {
+			font-size: 24px;
+
+		}
+		
 	}
 
 	&__quantity{
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		align-items: center;
+		@media screen and (max-width: 575px) {
+
+		}
 	}
 
 	&__wrap-price-text{
 		display: flex;
 		flex-wrap: wrap;
 		justify-content: space-between;
+		@media screen and (max-width: 575px) {
+			margin-bottom: 10px;
+			margin-right: 15px;
+		}
 	}
 
 	&__text-price{
@@ -198,17 +275,24 @@
 		&_sale{
 			color: #5EB159;
 			margin-left: 8px;
-			font-size: 20px;
+			font-size: 32px;
 		}
 	}
 
 	.wrap-recount{
 		margin-left: 12px;
+		@media screen and (max-width: 575px) {
+			margin: 10px 0;
+
+		}	
 	}
 
 
 	&__info-buttons{
 		margin-left: auto;
+		@media screen and (max-width: 575px) {
+			margin-left: 0;
+		}
 	}
 
 
@@ -247,6 +331,27 @@
 		margin: 15px 0;
 		padding: 10px 0 15px;
 		border-bottom: 1px solid $BasicBorderColor;
+		.button{
+			padding: 5px 10px;
+			@media screen and (max-width: $desktop) {
+				min-width: 220px;
+				margin-bottom: 18px;
+			}	
+		}
+
+		@media screen and (max-width: $desktop) {
+			flex-direction: column;
+			align-items: center;
+		}
+		@media screen and (max-width: 991px) {
+			flex-direction: row;
+		}
+		@media screen and (max-width: $mobile) {
+			flex-direction: column;
+			align-items: flex-start;
+		}
+
+
 
 	}
 
@@ -259,7 +364,7 @@
 		display: flex;
 		justify-content: space-between;
 		color: $dopDark;
-		margin-bottom: 12px;
+		margin-bottom: 15px;
 		font-size: 16px;
 		font-weight: 400;
 	}
