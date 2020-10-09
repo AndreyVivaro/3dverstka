@@ -97,47 +97,47 @@
 
 
 
-	.button-delete{
-		width: 26px;
-		height: 26px;
-		border: $basicColorAccent 1px solid;
-		border-radius: 100%;
-		position: relative;
-		background-color: #fff;
-		transition: 0.3s;
+	// .button-delete{
+	// 	width: 26px;
+	// 	height: 26px;
+	// 	border: $basicColorAccent 1px solid;
+	// 	border-radius: 100%;
+	// 	position: relative;
+	// 	background-color: #fff;
+	// 	transition: 0.3s;
 
-		&:before,
-		&:after{
-			content: "";
-			position: absolute;
-			z-index: 10;
-			width: 2px;
-			height: 16px;
-			background-color: $basicDark;
-			top: 4px;
-			left: 11px;
-			transition: 0.3s;
-		}
+	// 	&:before,
+	// 	&:after{
+	// 		content: "";
+	// 		position: absolute;
+	// 		z-index: 10;
+	// 		width: 2px;
+	// 		height: 16px;
+	// 		background-color: $basicDark;
+	// 		top: 4px;
+	// 		left: 11px;
+	// 		transition: 0.3s;
+	// 	}
 
-		&:before{
-			transform: rotate(45deg);
-		}
-		&:after{
-			transform: rotate(-45deg);
+	// 	&:before{
+	// 		transform: rotate(45deg);
+	// 	}
+	// 	&:after{
+	// 		transform: rotate(-45deg);
 
-		}	
+	// 	}	
 
-		&:hover{
-			background-color: #D24243;
-			border: #D24243 1px solid;
-			transition: 0.3s;
-			&:before,
-			&:after{
-				background-color: $BasicLight;
-				transition: 0.3s;
-			}
-		}
-	}
+	// 	&:hover{
+	// 		background-color: #D24243;
+	// 		border: #D24243 1px solid;
+	// 		transition: 0.3s;
+	// 		&:before,
+	// 		&:after{
+	// 			background-color: $BasicLight;
+	// 			transition: 0.3s;
+	// 		}
+	// 	}
+	// }
 
 	td{
 		&:last-child{

@@ -1,0 +1,261 @@
+// заказать звонок
+.cd-popup.cd-popup_call(role="alert")
+	.cd-popup-container
+		form
+			.cd-popup-close
+				span.cd-popup-close-icon
+			.cont-modal
+				p.descr-modal Обратный звонок
+				.fields-modal
+					.wrap-field-modal
+						p.text-field-modal Имя
+						input(type="text")
+					.wrap-field-modal
+						p.text-field-modal *Телефон:
+						input(type="text")
+					.wrap-field-modal
+						p.text-field-modal *E-mail:
+						input(type="text")
+					.wrap-field-modal.wrap-field-modal-agree
+						p.text-agree-modal Ознакомлен и согласен с
+							a.href-polit-modal(href="#")  условиями политики конфиденциальности
+						input(type="checkbox")
+					.wrap-button-modal
+						button.button Продолжить покупки
+						button.button Заказать звонок
+
+
+
+
+// добавление товара в корзину
+.cd-popup.cd-popup_basket.cd-popup_basket-js(role="alert")
+	.cd-popup-container
+		form
+			.cd-popup-close
+				span.cd-popup-close-icon
+			.cont-modal
+				p.descr-modal Товар добавлен в корзину
+				.fields-modal
+					.wrap-products-modal
+						-for(let i=0; i<3; i++)
+							.product-info-basket-modal
+								img.product-info-basket-modal-img(src="static/images/content/imgProduct3.jpg", alt="3D принтер Anycubic i3 Mega X")
+								p.product-info-basket-modal-name 3D принтер Anycubic i3 Mega X
+								.wrap-recount.wrap-recount-js.quantity-block-js
+									button.wrap-recount__recount-minus.recount-minus-js.quantity-arrow-minus-js -
+									input(type="number", value="1").wrap-recount__recount-input.recount-input-js.inputQuantity-js
+									button.wrap-recount__recount-plus.recount-plus-js.quantity-arrow-plus-js +
+								p.product-description__text-price.product-description__text-price-base
+									span(data-priceProduct="1100").number-space-js.price-product-js 1100
+									span.rub &nbsp;
+								button.button-delete
+					p.price-total-basket-modal
+						| Предварительная стоимость: 
+						span.product-description__text-price.product-description__text-price-base
+							span(data-priceProduct="20500").number-space-js.price-product-js 20500
+							span.rub &nbsp;
+					p.price-total-basket-modal
+						| Итого: 
+						span.product-description__text-price.product-description__text-price-base
+							span(data-priceProduct="20500").number-space-js.price-product-js 20500
+							span.rub &nbsp;
+
+
+					.wrap-button-modal
+						button.button Продолжить покупки
+						button.button Заказ в один клик
+						button.button Оформить заказ
+
+
+
+
+// быстрый просмотр
+.cd-popup.cd-popup_quickView(role="alert")
+	.cd-popup-container
+		form
+			.cd-popup-close
+				span.cd-popup-close-icon
+			.cont-modal
+				p.descr-modal 3D принтер Anycubic i3 Mega X
+				.fields-modal
+					
+					.wrap-sliders
+						.swiper-container.gallery-thumbs.gallery-thumbs-popup.swiper-container-card-product-vertical
+							.swiper-wrapper
+								-for(let i=0; i<10; i++)
+									.swiper-slide
+										img(src="static/images/content/product/product2.png", alt="Anycubic i3 Mega X")
+							//- .swiper-button-next.swiper-button-white
+							//- .swiper-button-prev.swiper-button-white
+						.swiper-container.gallery-top.gallery-top-popup.swiper-container-card-product-big
+							.swiper-wrapper
+								-for(let i=0; i<10; i++)
+									.swiper-slide
+										a(href="static/images/content/product/product2.png" data-rel="lightcase")
+											img.lightcase-card-product-js(src="static/images/content/product/product2.png", alt="Anycubic i3 Mega X")
+
+
+
+					.product-description
+						.product-description__info
+							.rating
+								span.rating__star &#9733;
+								span.rating__star &#9733;
+								span.rating__star &#9733;
+								span.rating__star &#9733;
+								span.rating__star &#9734;
+
+							p.product-description__presence Есть в наличии
+							// p.product-description__presence.product-description__presence_no Нет в наличии
+							.product-description__info-icons
+								div.product-description__info-icon.product-description__info-icon-basket-info-js
+									span
+									+icon("BasketInfo")
+								div.product-description__info-icon
+									span
+									+icon("Top")
+								div.product-description__info-icon
+									span
+									+icon("New")
+								div.product-description__info-icon
+									span 13%
+									+icon("Sale")
+
+						.product-description__wrap-name
+							h3.product-description__name Anycubic i3 Mega X
+						.product-description__quantity
+							.product-description__wrap-price-text
+								p.product-description__text-price.product-description__text-price-base.product-description__text-price_thround
+									span(data-priceProduct="32900").number-space-js.price-product-js 32900
+									span.rub &nbsp;
+								p.product-description__text-price.product-description__text-price_sale
+									span(data-priceProduct="59500").number-space-js.price-product-js 59500
+									span.rub &nbsp;
+
+							.wrap-recount.wrap-recount-js.quantity-block-js
+								button.wrap-recount__recount-minus.recount-minus-js.quantity-arrow-minus-js -
+								input(type="number", value="1").wrap-recount__recount-input.recount-input-js.inputQuantity-js
+								button.wrap-recount__recount-plus.recount-plus-js.quantity-arrow-plus-js +
+
+							.product-description__info-buttons
+								button.product-description__info-button.product-description__info-button-js
+									+icon("Scales")
+								button.product-description__info-button.product-description__info-button-js
+									+icon("Love")
+
+						.product-description__feature
+							p.product-description__feature-text
+								span Производитель:
+								span.product-description__feature-dotted
+								span.product-description__feature-param 300x300x305 мм
+
+
+					nav.wrap-tabs-description
+						#nav-tab.nav.nav-tabs(role='tablist')
+							a#nav-tab-1.nav-item.nav-link.active(data-toggle='tab' href='#nav-content-1' role='tab' aria-controls='nav-content-1' aria-selected='true') Описание
+							a#nav-tab-2.nav-item.nav-link(data-toggle='tab' href='#nav-content-2' role='tab' aria-controls='nav-content-2' aria-selected='false') Характеристики
+					#nav-tabContent.tab-content.wrap-tabContent-description
+						#nav-content-1.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='nav-tab-1') 
+							p Anycubic i3 Mega X - самый большой 3D принтер в семействе "Mega". Объем рабочей камеры составляет 300х300х305 мм, что на 30% больше чем у предшествующей модели Mega S. При этом машина сохраняет форм-фактор и все функции имеющиеся в предыдущих моделях. Anycubic по прежнему быстро и легко собирается, оснащен двойными рельсовыми направляющими по оси Y и рабочей платформой Ultrabase. Mega X обладает всеми лучшими качествами S-версии, но при этом имеет увеличенную рабочую область, которая позволит напечатать, полноразмерный шлем.
+							br
+							p Anycubic Mega X оснащен сенсорным дисплем 3,5 дюйма, с приятным цветовым интерфейсом. Термостол способен нагреваться до температуры 60°C за короткие 120 секунд, а максимальная температура хотэнда может достигать 200°C.
+							br
+							p <b> Различия между Mega X и Mega S. </b>
+							br
+							img(src="static/images/content/imgProduct.jpg", alt="изображение товара")
+							p Эти две машины практически идентичны - основные отличия заключаются в том, что X предлагает больший объем камеры построения и конструкцию с двумя винтовыми направляющими. Обе машины имеют практически одинаковую конструкцию, цветные сенсорные дисплеи, экструдер Боудена и поддерживают одинаковые типы филамента.
+							br
+							p Блок питания, материнская плата и сенсорный дисплей, аккуратно встроены в системный блок, что придает 3D принтеру стильный вид. Кроме того, цельнометаллическая рама и рельсовые направляющие внесли значительный вклад в стабильность печати. Mega X сочетает элегантный внешний вид и высокое качество.
+						#nav-content-2.tab-pane.fade(role='tabpanel' aria-labelledby='nav-tab-2')
+							p Anycubic i3 Mega X - самый большой 3D принтер в семействе "Mega". Объем рабочей камеры составляет 300х300х305 мм, что на 30% больше чем у предшествующей модели Mega S. При этом машина сохраняет форм-фактор и все функции имеющиеся в предыдущих моделях. Anycubic по прежнему быстро и легко собирается, оснащен двойными рельсовыми направляющими по оси Y и рабочей платформой Ultrabase. Mega X обладает всеми лучшими качествами S-версии, но при этом имеет увеличенную рабочую область, которая позволит напечатать, полноразмерный шлем.
+							br
+							p Anycubic Mega X оснащен сенсорным дисплем 3,5 дюйма, с приятным цветовым интерфейсом. Термостол способен нагреваться до температуры 60°C за короткие 120 секунд, а максимальная температура хотэнда может достигать 200°C.
+							br
+							p <b> Различия между Mega X и Mega S. </b>
+							br
+							img(src="static/images/content/imgProduct.jpg", alt="изображение товара")
+							p Эти две машины практически идентичны - основные отличия заключаются в том, что X предлагает больший объем камеры построения и конструкцию с двумя винтовыми направляющими. Обе машины имеют практически одинаковую конструкцию, цветные сенсорные дисплеи, экструдер Боудена и поддерживают одинаковые типы филамента.
+							br
+							p Блок питания, материнская плата и сенсорный дисплей, аккуратно встроены в системный блок, что придает 3D принтеру стильный вид. Кроме того, цельнометаллическая рама и рельсовые направляющие внесли значительный вклад в стабильность печати. Mega X сочетает элегантный внешний вид и высокое качество.
+
+
+
+
+
+					.wrap-button-modal
+						button.button Продолжить покупки
+						button.button Подробнее
+
+
+
+// заказ в один клик
+.cd-popup.cd-popup_oneClick(role="alert")
+	.cd-popup-container
+		form
+			.cd-popup-close
+				span.cd-popup-close-icon
+			.cont-modal
+				p.descr-modal Быстрый заказ
+				.fields-modal
+					.wrap-products-modal
+						.product-info-basket-modal
+							img.product-info-basket-modal-img(src="static/images/content/imgProduct3.jpg", alt="3D принтер Anycubic i3 Mega X")
+							p.product-info-basket-modal-name 3D принтер Anycubic i3 Mega X
+							.wrap-recount.wrap-recount-js.quantity-block-js
+								button.wrap-recount__recount-minus.recount-minus-js.quantity-arrow-minus-js -
+								input(type="number", value="1").wrap-recount__recount-input.recount-input-js.inputQuantity-js
+								button.wrap-recount__recount-plus.recount-plus-js.quantity-arrow-plus-js +
+							p.product-description__text-price.product-description__text-price-base
+								span(data-priceProduct="1100").number-space-js.price-product-js 1100
+								span.rub &nbsp;
+					.wrap-field-modal
+						p.text-field-modal Имя
+						input(type="text")
+					.wrap-field-modal
+						p.text-field-modal *Телефон:
+						input(type="text")
+					.wrap-field-modal
+						p.text-field-modal *E-mail:
+						input(type="text")
+					.wrap-field-modal
+						p.text-field-modal Комментарий:
+						textarea
+
+					.wrap-field-modal.wrap-field-modal-agree
+						p.text-agree-modal Ознакомлен и согласен с
+							a.href-polit-modal(href="#")  условиями политики конфиденциальности
+						input(type="checkbox")
+					.wrap-button-modal
+						button.button Продолжить покупки
+						button.button Оформить заказ
+
+
+
+// запрос коммерческого предложения
+// необходимо вывести классы для вызова данного окна
+.cd-popup.cd-popup_commercialProposal(role="alert")
+	.cd-popup-container
+		form
+			.cd-popup-close
+				span.cd-popup-close-icon
+			.cont-modal
+				p.descr-modal Запрос коммерческого предложения
+				.fields-modal
+					.wrap-field-modal
+						p.text-field-modal Имя
+						input(type="text")
+					.wrap-field-modal
+						p.text-field-modal *Телефон:
+						input(type="text")
+					.wrap-field-modal
+						p.text-field-modal *E-mail:
+						input(type="text")
+					.wrap-field-modal.wrap-field-modal-agree
+						p.text-agree-modal Ознакомлен и согласен с
+							a.href-polit-modal(href="#")  условиями политики конфиденциальности
+						input(type="checkbox")
+					.wrap-button-modal
+						button.button Продолжить покупки
+						button.button Заказ в один клик
+						button.button Оформить заказ
+

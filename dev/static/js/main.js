@@ -149,6 +149,54 @@ var galleryThumbs = new Swiper('.gallery-thumbs', {
 
 
 
+// слайдер в popup окне быстрого просмотра
+// левый вертиикальный
+var galleryThumbsPopup = new Swiper('.gallery-thumbs-popup', {
+	spaceBetween: 10,
+	slidesPerView: 4,
+	// direction: 'vertical',
+	direction: getDirectionPopup(),
+	freeMode: true,
+	watchSlidesVisibility: true,
+	watchSlidesProgress: true,    
+    on: {
+        resize: function () {
+			galleryThumbsPopup.changeDirection(getDirectionPopup());
+		}
+	}
+	
+  });
+
+  function getDirectionPopup() {
+	var windowWidth = window.innerWidth;
+	var direction = window.innerWidth <= 768 ? 'horizontal' : 'vertical';
+
+	return direction;
+  };
+
+
+
+// правый большой
+
+  var galleryTopPopup = new Swiper('.gallery-top-popup', {
+	spaceBetween: 0,
+	thumbs: {
+	  swiper: galleryThumbsPopup
+	}
+  });
+
+
+
+// слайдер в popup окне быстрого просмотра
+
+
+
+
+
+
+
+
+
 // открытие/закрытие мобильного меню
 $(".menu-icon-mobile-js").on("click", function(){
 	$(".header-popup-js").toggleClass("active");
@@ -231,10 +279,88 @@ function calcQuantityPrice(item, quantity ){
 
 // lightcase в карточке товара
 
-// $('.lightcase-card-product-js').lightcase();
-
 $('a[data-rel^=lightcase]').lightcase();
 
+
+
+
+
+
+	/*открытие и закрытие модального окна с формой*/
+
+	//open popup cd-popup_call
+	// заказать звонок
+	$('.button-call').on('click', function(event){
+		event.preventDefault();
+		console.log("клик");
+		$('.cd-popup_call').addClass('is-visible');
+		$("body").addClass("vue-popup");
+
+	});
+	
+
+	//open popup cd-popup_basket
+	// добавление товара в корзину
+	$('.card-product-wrap__button-main-basket-js').on('click', function(event){
+		event.preventDefault();
+		console.log("клик");
+		$('.cd-popup_basket').addClass('is-visible');
+		$("body").addClass("vue-popup");
+	});
+
+
+	//open popup cd-popup_quickView
+	// быстрый просмотр
+	$('a.card-product-wrap__info-button').on('click', function(event){
+		event.preventDefault();
+		console.log("клик");
+		$('.cd-popup_quickView').addClass('is-visible');
+		$("body").addClass("vue-popup");
+	});
+
+
+	//open popup cd-popup_quickView
+	// заказ в один клик
+	$('.card-product-wrap__button-one').on('click', function(event){
+		event.preventDefault();
+		console.log("клик");
+		$('.cd-popup_oneClick').addClass('is-visible');
+		$("body").addClass("vue-popup");
+	});
+
+	
+	//open popup cd-popup_commercialProposal
+	// запрос коммерческого предложения
+	// необходимо выыести классы для вызова данного окна
+
+	// $('.card-product-wrap__button-main-basket-js').on('click', function(event){
+	// 	event.preventDefault();
+	// 	console.log("клик");
+	// 	$('.cd-popup_commercialProposal').addClass('is-visible');
+	// 	$("body").addClass("vue-popup");
+	// });
+
+
+	//close popup
+	$(".cd-popup").on('click', function(event){
+		// $(event.target).is('.cd-popup-close') || $(event.target).is('.cd-popup')
+		// if( $(event.target).is('.cd-popup-close') ) {
+
+		if( $(event.target).is('.cd-popup-close-icon') || $(event.target).is('.cd-popup') ) {
+			event.preventDefault();
+			$(this).removeClass('is-visible');
+			console.log("клик 2222");
+			$("body").removeClass("vue-popup");
+		}
+	});
+
+	//close popup when clicking the esc keyboard button
+	$(document).keyup(function(event){
+		if(event.which=='27'){
+			$('.cd-popup').removeClass('is-visible');
+			$("body").removeClass("vue-popup");
+		}
+	});
 
 
 

@@ -647,9 +647,18 @@ abbr {
 }
 
 
+body.vue-popup{
+	overflow: hidden;
+}
+
+
 
 
 @import "modules/modules";
+
+@import "modules/modal/modal";
+
+
 @import "components/topSlider";
 @import "components/main-catalog";
 @import "components/main-product";
