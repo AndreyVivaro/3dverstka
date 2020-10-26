@@ -102,6 +102,7 @@
 			font-size: 14px;
 			text-decoration: none;
 			padding: 5px;
+			font-weight: 500;
 			transition: all 0.3s;
 			&:hover{
 				color: $basicColorAccent;
@@ -124,6 +125,7 @@
 			font-size: 14px;
 			text-decoration: none;
 			padding: 5px;
+			font-weight: 500;
 			transition: all 0.3s;
 			&:hover{
 				color: $basicColorAccent;
@@ -191,7 +193,7 @@
 	.contacts-email{
 
 		.email-href{
-			font-weight: normal;
+			font-weight: 500;
 			font-size: 14px;
 			color: $basicDark;
 			transition: all 0.3s;		
@@ -341,7 +343,7 @@
 	flex-wrap: wrap;
 	a{
 		color: $basicDark;
-		font-weight: 500;
+		font-weight: 600;
 		font-size: 16px;
 		text-decoration: none;
 		// padding: 8px;
@@ -362,7 +364,7 @@
 		background: $BasicLight;
 		visibility: hidden;	
 		transform: translateY(-5px);
-		transition: all 0.3s;
+		transition: all 0s;  // время скрытия
 		flex-wrap: wrap;
 		max-width: 100%;
 		left: 0;
@@ -485,7 +487,7 @@
 			align-items: center;
 			img{
 				width: auto;
-				max-width: 100%;				
+				max-width: 100%;
 			}
 		}
 	

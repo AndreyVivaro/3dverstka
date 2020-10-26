@@ -6,6 +6,7 @@
 	min-width: 164px;
 	padding: 5px 5px;
 	height: 42px;
+	font-weight: 500;
 	background-color: transparent;
 	border: 1px solid $basicColorAccent;
 	border-radius: 4px 500px 500px 4px;
@@ -15,6 +16,16 @@
 		fill: $basicColorAccent;
 		transition: all 0.3s;
 	}
+
+	&.button-call{
+		background-color: $basicColorAccent;
+		color: $BasicLight;
+		&:hover{
+			background-color: $BasicLight;
+			color: $basicColorAccent;
+		}
+	}
+
 
 	&.button-from-title{
 		display: inline-flex;

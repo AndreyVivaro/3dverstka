@@ -1,0 +1,674 @@
+
+
+
+	/* Начало. правки по замечаниям 22.10.2020 Андрей Б. */
+
+
+/* изображение на странице товара */
+.section-card-product .tab-content img,
+ .fields-modal .tab-content img {
+	float: none;
+	margin-left: 15px;
+	max-width: 100%;
+	height: auto;
+}
+
+
+/* кнопка поиска в мобильной версии */
+@media screen and (max-width: 1024px){
+	.header-popup .search-input { 
+		background-image: none;
+		width: calc(100% - 50px);
+		margin-right: 10px;
+	}
+
+	.header-popup .header-search button{
+		display: inline-block;
+    width: 26px;
+    height: 26px;
+    border: 1px solid #606060;
+    background-color: transparent;
+    border-radius: 100px;
+	 background-image: url(../images/general/Search.svg); 
+	/*background-image: url(../static/images/general/Search.svg);*/
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 12px 12px;
+	}
+
+	.header-popup .header-search button:focus{
+		border: 1px solid #222;
+	}
+}
+
+
+
+
+/* карточка товара */
+.card-product-wrap {
+min-height: 570px;
+padding-bottom: 42px;
+}
+
+
+@media screen and (max-width: 1200px){
+	.card-product-wrap {
+	min-height: 1px;
+	}
+}
+
+
+
+
+/*recommendedProduct*/
+
+
+@media screen and (max-width: 1200px){
+	.youWatched .card-product-wrap,
+	.recommendedProduct .card-product-wrap {
+	min-height: 650px;
+	}
+}
+
+
+
+
+
+.card-product-wrap__wrap-info-icons-buttons{
+	width: 100%;
+}
+.card-product-wrap__button-main{
+position: absolute;
+bottom: 0;
+}
+.card-product-wrap__wrap-buttons{
+	bottom: -84px;
+}
+
+.card-product-wrap__name{
+	color: inherit;
+}
+
+
+
+@media screen and (max-width: 1024px){
+
+		.card-product-wrap__button-main{
+			position: static;
+		}
+
+		.card-product-wrap{
+			padding-bottom: 0;
+		}
+
+
+
+		.youWatched .card-product-wrap,
+		.recommendedProduct .card-product-wrap		{
+			padding-bottom: 42px;
+		}
+
+	.youWatched .card-product-wrap .card-product-wrap__button-main,
+	.recommendedProduct .card-product-wrap .card-product-wrap__button-main	{
+		position: absolute;
+		bottom: 84px;
+	}
+
+	.youWatched .card-product-wrap .card-product-wrap__wrap-buttons,
+	.recommendedProduct .card-product-wrap .card-product-wrap__wrap-buttons	{
+		position: absolute;
+		bottom: 0;
+	}
+
+}
+
+
+
+@media screen and (max-width: 991px){
+		.youWatched .card-product-wrap,
+		.recommendedProduct .card-product-wrap
+
+		 {
+			min-height: 1px;
+			}
+
+		.youWatched .card-product-wrap,
+		.recommendedProduct .card-product-wrap{
+			padding-bottom: 0px;
+		}
+
+	.youWatched .card-product-wrap .card-product-wrap__button-main,
+	.recommendedProduct .card-product-wrap .card-product-wrap__button-main	{
+			position: static;
+	}
+
+	.youWatched .card-product-wrap .card-product-wrap__wrap-buttons,
+	.recommendedProduct .card-product-wrap .card-product-wrap__wrap-buttons	{
+		position: static;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+/* изображение в слайдере страницы товара */
+.gallery-top.swiper-container-card-product-big img {
+	height: 100%;
+}
+
+
+/* стилизация ссылок */
+a:link {
+	color: #222222;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+a:visited {
+	color: #222222;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+a:hover {
+	color: #5EB159;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+a:active {
+	color: #5EB159;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+
+
+
+
+
+/* кнопки, добавленные после натяжки на open cart */
+.btn.btn-success.btn-block,
+.btn.btn-danger.btn-block,
+.btn.btn-success{
+	text-decoration: none;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 164px;
+	padding: 5px 5px;
+	height: 42px;
+	background-color: transparent;
+	border-radius: 4px 500px 500px 4px;
+	transition: all 0.3s;
+}
+.btn.btn-success.btn-block,
+.btn.btn-success{
+	border: 1px solid #5EB159;
+	color: #5EB159;
+
+}
+
+.btn.btn-danger.btn-block{
+	border: 1px solid #dc3545;
+	color: #dc3545;
+}
+
+.btn.btn-success.btn-block:hover,
+.btn.btn-danger.btn-block:hover,
+.btn.btn-success:hover{
+	color: #fff;
+	cursor: pointer;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+
+.btn.btn-success.btn-block:hover,
+.btn.btn-success:hover{
+	background-color: #5EB159;
+}
+
+.btn.btn-danger.btn-block:hover {
+	background-color: #dc3545;
+}
+
+
+
+
+
+/* адаптивная таблица на странице сравнения */
+.compare-wrap-table{
+	overflow-y: auto;
+} 
+
+
+/*Корзина в модальном окне*/
+.product-info-basket-modal .product-info-basket-modal-name{
+	flex: 1 0 20%;
+	max-width: 330px;
+}
+
+
+.product-info-basket-modal .product-description__text-price {
+	width: 100px;
+	text-align: center;
+	margin: 0 10px;
+}
+
+@media (max-width: 767px){
+	.display-products-cart {
+    display: flex;
+}
+}
+
+
+
+
+@media screen and (max-width: 768px){
+	.wrap-button-modal .button {
+    max-width: 200px;
+    min-width: 200px;
+    margin: 0 auto 12px;
+}
+}
+
+
+/* Окончание. правки по замечаниям 22.10.2020 Андрей Б. */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/* Начало. правки по замечаниям 26.10.2020 Андрей Б. */
+
+
+
+.main-catalog__card-text:link {
+	color: #fff;
+}
+
+.main-catalog__card-text:visited {
+	color: #fff;
+}
+.main-catalog__card-text:hover {
+	color: #FFE419;
+}
+.main-catalog__card-text:active {
+	color: #FFE419;
+}
+
+
+
+	/* Окончание. правки по замечаниям 26.10.2020 Андрей Б. */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*2222222222222222222222222222
+
+
+
+
+
+
+
+
+	/* Начало. правки по замечаниям 22.10.2020 Андрей Б. */
+
+
+/* изображение на странице товара */
+.section-card-product .tab-content img,
+ .fields-modal .tab-content img {
+	float: none;
+	margin-left: 15px;
+	max-width: 100%;
+	height: auto;
+}
+
+
+/* кнопка поиска в мобильной версии */
+@media screen and (max-width: 1024px){
+	.header-popup .search-input { 
+		background-image: none;
+		width: calc(100% - 50px);
+		margin-right: 10px;
+	}
+
+	.header-popup .header-search button{
+		display: inline-block;
+    width: 26px;
+    height: 26px;
+    border: 1px solid #606060;
+    background-color: transparent;
+    border-radius: 100px;
+	 background-image: url(../images/general/Search.svg); 
+	/*background-image: url(../static/images/general/Search.svg);*/
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: 12px 12px;
+	}
+
+	.header-popup .header-search button:focus{
+		border: 1px solid #222;
+	}
+}
+
+
+
+
+/* карточка товара */
+.slider-product-cart .card-product-wrap {
+min-height: 550px;
+}
+
+
+ .card-product-wrap {
+padding-bottom: 42px;
+}
+
+
+
+
+@media screen and (max-width: 1200px){
+	.slider-product-cart.card-product-wrap {
+	min-height: 550px;
+	}
+}
+
+
+
+
+
+@media screen and (max-width: 1200px){
+	.youWatched .card-product-wrap,
+	.recommendedProduct .card-product-wrap {
+	/*min-height: 650px;*/
+	}
+}
+
+
+
+
+
+.card-product-wrap__wrap-info-icons-buttons{
+	width: 100%;
+}
+.card-product-wrap__button-main{
+position: absolute;
+bottom: 0;
+}
+.card-product-wrap__wrap-buttons{
+	bottom: -84px;
+}
+
+.card-product-wrap__name{
+	color: inherit;
+}
+
+
+
+@media screen and (max-width: 1024px){
+
+		.card-product-wrap__button-main{
+			position: static;
+		}
+
+		.card-product-wrap{
+			padding-bottom: 0;
+		}
+
+
+
+		.youWatched .card-product-wrap,
+		.recommendedProduct .card-product-wrap		{
+			padding-bottom: 42px;
+		}
+
+	.youWatched .card-product-wrap .card-product-wrap__button-main,
+	.recommendedProduct .card-product-wrap .card-product-wrap__button-main	{
+		position: absolute;
+		bottom: 84px;
+	}
+
+	.youWatched .card-product-wrap .card-product-wrap__wrap-buttons,
+	.recommendedProduct .card-product-wrap .card-product-wrap__wrap-buttons	{
+		position: absolute;
+		bottom: 0;
+	}
+
+}
+
+
+
+@media screen and (max-width: 991px){
+		.youWatched .card-product-wrap,
+		.recommendedProduct .card-product-wrap
+
+		 {
+			min-height: 1px;
+			}
+
+		.youWatched .card-product-wrap,
+		.recommendedProduct .card-product-wrap{
+			padding-bottom: 0px;
+		}
+
+	.youWatched .card-product-wrap .card-product-wrap__button-main,
+	.recommendedProduct .card-product-wrap .card-product-wrap__button-main	{
+			position: static;
+	}
+
+	.youWatched .card-product-wrap .card-product-wrap__wrap-buttons,
+	.recommendedProduct .card-product-wrap .card-product-wrap__wrap-buttons	{
+		position: static;
+	}
+
+}
+
+
+
+
+
+
+
+
+
+/* изображение в слайдере страницы товара */
+.gallery-top.swiper-container-card-product-big img {
+	height: 100%;
+}
+
+
+/* стилизация ссылок */
+a:link {
+	color: #222222;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+a:visited {
+	color: #222222;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+a:hover {
+	color: #5EB159;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+a:active {
+	color: #5EB159;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+
+
+
+
+
+/* кнопки, добавленные после натяжки на open cart */
+.btn.btn-success.btn-block,
+.btn.btn-danger.btn-block,
+.btn.btn-success{
+	text-decoration: none;
+	display: inline-flex;
+	justify-content: center;
+	align-items: center;
+	min-width: 164px;
+	padding: 5px 5px;
+	height: 42px;
+	background-color: transparent;
+	border-radius: 4px 500px 500px 4px;
+	transition: all 0.3s;
+}
+.btn.btn-success.btn-block,
+.btn.btn-success{
+	border: 1px solid #5EB159;
+	color: #5EB159;
+
+}
+
+.btn.btn-danger.btn-block{
+	border: 1px solid #dc3545;
+	color: #dc3545;
+}
+
+.btn.btn-success.btn-block:hover,
+.btn.btn-danger.btn-block:hover,
+.btn.btn-success:hover{
+	color: #fff;
+	cursor: pointer;
+	text-decoration: none;
+	transition: all 0.3s;
+}
+
+.btn.btn-success.btn-block:hover,
+.btn.btn-success:hover{
+	background-color: #5EB159;
+}
+
+.btn.btn-danger.btn-block:hover {
+	background-color: #dc3545;
+}
+
+
+
+
+
+/* адаптивная таблица на странице сравнения */
+.compare-wrap-table{
+	overflow-y: auto;
+} 
+
+
+/*Корзина в модальном окне*/
+.product-info-basket-modal .product-info-basket-modal-name{
+	flex: 1 0 20%;
+	max-width: 330px;
+}
+
+
+.product-info-basket-modal .product-description__text-price {
+	width: 100px;
+	text-align: center;
+	margin: 0 10px;
+}
+
+@media (max-width: 767px){
+	.display-products-cart {
+    display: flex;
+}
+}
+
+
+
+
+@media screen and (max-width: 768px){
+	.wrap-button-modal .button {
+    max-width: 200px;
+    min-width: 200px;
+    margin: 0 auto 12px;
+}
+}
+
+
+/* Окончание. правки по замечаниям 22.10.2020 Андрей Б. */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	/* Начало. правки по замечаниям 26.10.2020 Андрей Б. */
+
+
+
+.main-catalog__card-text:link {
+	color: #fff;
+}
+
+.main-catalog__card-text:visited {
+	color: #fff;
+}
+.main-catalog__card-text:hover {
+	color: #FFE419;
+}
+.main-catalog__card-text:active {
+	color: #FFE419;
+}
+
+
+
+	/* Окончание. правки по замечаниям 26.10.2020 Андрей Б. */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

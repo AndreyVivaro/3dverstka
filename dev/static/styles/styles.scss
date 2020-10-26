@@ -153,7 +153,7 @@ abbr {
 
 
 .section-title{
-	font-weight: 500;
+	font-weight: 600;
 	font-size: 36px;
 	color: $basicDark;
 	text-align: center;
@@ -537,17 +537,26 @@ abbr {
 	padding: 0;
 
 	.breadcrumb-item {
+		color: $basicDark;
+		font-size: 14px;
+		transition: all 0.3s;
+		font-weight: 500;
 		a { 
 			color: $basicDark;
 			font-size: 14px;
 			transition: all 0.3s;
-			font-weight: 300;
+			font-weight: 500;
 			text-decoration: none;
 			&:hover{
 				text-decoration: none;
 				color: $basicColorAccent;
 				transition: all 0.3s;
-			}		
+			}
+		}
+		&.active{
+			font-size: 14px;
+			font-weight: 500;
+			color: $basicColorAccent;
 		}
 	 }
 }
@@ -567,7 +576,7 @@ abbr {
 	.page-link{
 		color: $basicDark;
 		font-size: 14px;
-		font-weight: 400;
+		font-weight: 500;
 		background-color: $BasicBorderColor;
 		transition: all 0.3s;
 		&:hover{
@@ -596,7 +605,7 @@ abbr {
 	&__recount-plus {
 		border: none;
 		font-size: 18px;
-		font-weight: 500;
+		font-weight: 600;
 		background-color: #fff;
 		color: #222222;
 		transition: 0.3s;
@@ -608,7 +617,7 @@ abbr {
 		border: solid 1px transparent;
 		text-align: center;
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 500;
 		background-color: #fff;
 		color: $basicDark;
 		border-radius: 4px;
@@ -640,7 +649,7 @@ abbr {
 
 
 .title-column{
-	font-weight: 500;
+	font-weight: 600;
 	font-size: 18px;
 	color: $basicDark;
 	 margin-bottom: 20px;
@@ -679,9 +688,6 @@ body.vue-popup{
 
 
 
-@import "components/about";
-@import "components/decision";
-@import "components/contact";
 
 
 
@@ -724,7 +730,7 @@ body.vue-popup{
 	background-color: #FAFAFA;
 	.nav-link {
 		padding: 26px 20px;
-		font-weight: 400;
+		font-weight: 500;
 		font-size: 16px;
 		color:  $basicDark;
 		transition: all 0.3s;
@@ -827,7 +833,7 @@ body.vue-popup{
 // 		font-weight: 600;
 // 		&:after {
 // 			content: ' ₽';
-// 			font-weight: 400;
+// 			font-weight: 500;
 // 		}
 // 	}
 // }

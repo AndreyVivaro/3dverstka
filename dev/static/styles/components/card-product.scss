@@ -107,6 +107,10 @@
 	}
 
 
+	.rating{
+		margin: 0 auto 10px;
+		text-align: center;
+	}
 
 
 
@@ -135,7 +139,8 @@
 		font-size: 16px;
 		color:  $basicDark;
 		text-align: center;
-		margin-bottom: 34px;
+		min-height: 40px;
+		margin-bottom: 8px;
 		@media screen and (max-width: $mobile) {
 			font-size: 14px;
 		}
@@ -150,19 +155,19 @@
 	}
 
 	&__info-text{
-		font-weight: 300;
+		font-weight: 500;
 		font-size: 14px;
 		color: $dopDark;
 	}
 
 	&__info-param{
-		font-weight: 400;
+		font-weight: 500;
 		font-size: 14px;
 		color: $basicDark;
 	}
 
 	&__name-descr{
-		font-weight: 400;
+		font-weight: 500;
 		font-size: 14px;
 		color: $basicDark;	
 		text-align: center;
@@ -176,7 +181,7 @@
 		padding: 4px 8px;
 		margin-bottom: 4px;
 		display: inline-block;
-		font-weight: 300;
+		font-weight: 500;
 		font-size: 14px;
 		color: $dopLight;
 		transition: 0.3s;
@@ -199,7 +204,7 @@
 
 
 	&__wrap-text-dop-descr{
-		font-weight: 300;
+		font-weight: 500;
 		font-size: 14px;
 		color: $dopDark;
 		margin-right: 12px;
@@ -273,7 +278,7 @@
 		border: solid 1px transparent;
 		text-align: center;
 		font-size: 16px;
-		font-weight: 400;
+		font-weight: 500;
 		background-color: #fff;
 		color: $basicDark;
 		border-radius: 4px;
@@ -306,7 +311,7 @@
 		align-items: center;
 		color: $BasicLight;
 		font-size: 	14px;
-		font-weight: 400;
+		font-weight: 500;
 		border: none;
 		transition: 0.3s;
 
@@ -394,7 +399,7 @@
 		align-items: center;
 		color: $basicColorAccent;
 		font-size: 	14px;
-		font-weight: 400;
+		font-weight: 500;
 		border: 1px solid $basicColorAccent;
 		transition: 0.3s;
 		.svg-sprite-icon{
@@ -494,6 +499,7 @@
 
 		.given-section-wrap-card{
 			padding-bottom: 40px;
+
 		}
 		.card-product-wrap__wraper-content {
 			padding: 0 7px;
@@ -537,3 +543,18 @@
 }
 
 // уменьшенная карточка товара на больших экранах, т.к. не вмещается контент
+
+
+
+
+
+
+
+.given-section-wrap-card{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	.card-product-wrap{
+		height: 100%;
+	}
+}
