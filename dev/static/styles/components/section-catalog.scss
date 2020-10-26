@@ -1,5 +1,6 @@
 .section-catalog{
 	.accordion{
+		margin-bottom: 20px;
 		.card{
 
 		}
@@ -65,7 +66,7 @@
 		width: 100%;
 		max-width: 300px;
 		height: 300px;
-		@media screen and (max-width: $mobile) {
+		@media screen and (max-width: $tablet) {
 			display: none;
 			margin: 15px auto;
 			height: auto;
@@ -112,20 +113,19 @@
 
 
 
-.col-wrap-choice{
-	height: 300px;
-}
+// .col-wrap-choice{
+// 	height: 300px;
+// }
 
-.row-wrap-company{
-	margin-top: -600px;
-	@media screen and (max-width: $desktop) {
-		margin-top: -300px;
-	}
-	@media screen and (max-width: $mobile) {
-		margin-top: 0px;
-	}
-
-}
+// .row-wrap-company{
+// 	margin-top: -600px;
+// 	@media screen and (max-width: $desktop) {
+// 		margin-top: -300px;
+// 	}
+// 	@media screen and (max-width: $mobile) {
+// 		margin-top: 0px;
+// 	}
+// }
 
 
 .company{

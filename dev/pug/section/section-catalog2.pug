@@ -1,0 +1,185 @@
+// откорректированная версия каталога. 26.10.2020
+section.section-catalog.section-padding-bottom
+	.container
+		.row
+			.col-xl-3.col-lg-12.col-wrap-choice
+				.row
+					.col-xl-12
+
+						#accordionExample.accordion
+
+							.card
+								#headingOne.card-header
+									h5.mb-0
+										button.btn.btn-link(type='button' data-toggle='collapse' data-target='#collapseOne' aria-expanded='true' aria-controls='collapseOne') 
+											span.animate-arrow-left-top Производитель:
+								#collapseOne.collapse.show(aria-labelledby='headingOne' data-parent='#accordionExample')
+									.card-body
+										-for(let i=0; i<20; i++)
+											label.label-checkbox
+												input(type="checkbox")
+												span.text-checkbox Параметр 1
+											label.label-checkbox
+												input(type="checkbox")
+												span.text-checkbox MakerBot
+											label.label-checkbox
+												input(type="checkbox")
+												span.text-checkbox Hewlett Packard
+
+							.card
+								#headingTwo.card-header
+									h5.mb-0
+										button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapseTwo' aria-expanded='false' aria-controls='collapseTwo')
+											span.animate-arrow-left-top Технология печати:
+								#collapseTwo.collapse(aria-labelledby='headingTwo' data-parent='#accordionExample')
+									.card-body
+										-for(let i=0; i<20; i++)
+											label.label-checkbox
+												input(type="checkbox")
+												span.text-checkbox Параметр 1
+											label.label-checkbox
+												input(type="checkbox")
+												span.text-checkbox MakerBot
+											label.label-checkbox
+												input(type="checkbox")
+												span.text-checkbox Hewlett Packard
+							.card
+								#headingThree.card-header
+									h5.mb-0
+										button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapseThree' aria-expanded='false' aria-controls='collapseThree')
+											span.animate-arrow-left-top Рабочая камера:
+								#collapseThree.collapse(aria-labelledby='headingThree' data-parent='#accordionExample')
+									.card-body
+										-for(let i=0; i<20; i++)
+											label.label-checkbox
+												input(type="checkbox")
+												span.text-checkbox Параметр 1
+											label.label-checkbox
+												input(type="checkbox")
+												span.text-checkbox MakerBot
+											label.label-checkbox
+												input(type="checkbox")
+												span.text-checkbox Hewlett Packard
+							.card
+								#headingOne.card-header
+									h5.mb-0
+										button.btn.btn-link(type='button' data-toggle='collapse' data-target='#collapse4' aria-expanded='false' aria-controls='collapse4') 
+											span.animate-arrow-left-top Производитель:
+								#collapse4.collapse.collapse(aria-labelledby='heading4' data-parent='#accordionExample')
+									.card-body
+										-for(let i=0; i<20; i++)
+											label.label-checkbox
+												input(type="checkbox")
+												span.text-checkbox Параметр 1
+											label.label-checkbox
+												input(type="checkbox")
+												span.text-checkbox MakerBot
+											label.label-checkbox
+												input(type="checkbox")
+												span.text-checkbox Hewlett Packard
+
+							.card
+								#headingTwo.card-header
+									h5.mb-0
+										button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapse5' aria-expanded='false' aria-controls='collapse5')
+											span.animate-arrow-left-top Технология печати:
+								#collapse5.collapse(aria-labelledby='heading5' data-parent='#accordionExample')
+									.card-body
+										-for(let i=0; i<20; i++)
+											label.label-checkbox
+												input(type="checkbox")
+												span.text-checkbox Параметр 1
+											label.label-checkbox
+												input(type="checkbox")
+												span.text-checkbox MakerBot
+											label.label-checkbox
+												input(type="checkbox")
+												span.text-checkbox Hewlett Packard
+							.card
+								#headingThree.card-header
+									h5.mb-0
+										button.btn.btn-link.collapsed(type='button' data-toggle='collapse' data-target='#collapse6' aria-expanded='false' aria-controls='collapse6')
+											span.animate-arrow-left-top Рабочая камера:
+								#collapse6.collapse(aria-labelledby='heading6' data-parent='#accordionExample')
+									.card-body
+										-for(let i=0; i<20; i++)
+											label.label-checkbox
+												input(type="checkbox")
+												span.text-checkbox Параметр 1
+											label.label-checkbox
+												input(type="checkbox")
+												span.text-checkbox MakerBot
+											label.label-checkbox
+												input(type="checkbox")
+												span.text-checkbox Hewlett Packard
+
+				.row
+					.col-xl-12
+						.section-catalog__wrap-baner
+							a.section-catalog__baner-href(href="#")
+								img(src="static/images/general/banner2.jpg", alt="изображение банера")
+
+
+
+
+			//.col-xl-9.offset-xl-3.col-lg-9.offset-lg-3.col-md-9.offset-md-3.col-sm-12.offset-sm-0
+			.col-xl-9
+
+				.row
+					.col-xl-12
+						.company
+							-for(let i=0; i<18; i++)
+								a.company-href(href="#")
+									img(src="static/images/content/logoCompany/logoCompany-1.png", alt="Производитель")
+
+				.row.row-wrap-products
+					//.col-xl-9.offset-xl-3.col-lg-9.offset-lg-3.col-md-9.offset-md-3.col-sm-12.offset-sm-0
+					.col-xl-12
+
+						.row.row-wrap-card-little
+							-for(let i=0; i<6; i++)
+								.col-xl-4
+									.given-section-wrap-card
+										include ./card-product-1
+							-for(let i=0; i<3; i++)
+								.col-xl-4
+									.given-section-wrap-card
+										include ./card-product-2
+							-for(let i=0; i<3; i++)
+								.col-xl-4
+									.given-section-wrap-card
+										include ./card-product-3
+
+
+				.row
+					.col-xl-12
+
+						nav.page-navigation(aria-label='Page navigation')
+							ul.pagination.justify-content-center
+								li.page-item
+									a.page-link(href='#' aria-label='Start')
+										span(aria-hidden='true') &#171;
+								li.page-item
+									a.page-link(href='#' aria-label='Previous')
+										span(aria-hidden='true') &#8249;
+								li.page-item
+									a.page-link(href='#') 1
+								li.page-item
+									a.page-link(href='#') 2
+								li.page-item
+									a.page-link(href='#') 3
+								li.page-item
+									a.page-link(href='#') 4
+								li.page-item
+									a.page-link(href='#' aria-label='Next')
+										span(aria-hidden='true') &#8250;
+								li.page-item
+									a.page-link(href='#' aria-label='Finish')
+										span(aria-hidden='true') &#187;
+
+// откорректированная версия каталога. 26.10.2020
+
+
+
+
+
