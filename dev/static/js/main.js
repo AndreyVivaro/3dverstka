@@ -51,7 +51,7 @@ var swiperMainProduct = new Swiper('.slider-product-cart__swiper-container', {
 		effect: 'cube',
 	grabCursor: true,
 	cubeEffect: {
-		shadow: true,
+		shadow: false,
 		slideShadows: false,
 		shadowOffset: 20,
 		shadowScale: 0.94,
