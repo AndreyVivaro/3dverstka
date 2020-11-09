@@ -542,6 +542,18 @@
 	}
 }
 
+.given-section-wrap-card{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	.card-product-wrap{
+		height: 100%;
+	}
+} 
+
+
+
+
 // уменьшенная карточка товара на больших экранах, т.к. не вмещается контент
 
 

@@ -364,4 +364,25 @@ $('a[data-rel^=lightcase]').lightcase();
 
 
 
+
+	// каталог 1 уровня и каталог 2 уровня
+
+
+let xxx = $(".wrapper").find('.breadcrumb-item').length;
+console.log(xxx);
+
+if(xxx == 0){
+	console.log("NO");
+}else if(xxx == 1){
+$(".company").children(".company-href").addClass("firstCatalog");
+console.log("111111");
+
+}else{
+	$(".company").children(".company-href").removeClass("firstCatalog");
+	console.log("2222222");
+
+}
+
+
+
 });
